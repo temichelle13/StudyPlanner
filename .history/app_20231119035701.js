@@ -1,0 +1,24 @@
+const express = require('express');
+const cors = require('cors');
+const taskRoutes = require('./routes/taskRoutes');
+
+const app = express();
+const port = process.env.PORT || 3000;
+
+// Middleware to parse JSON and urlencoded data and to enable CORS
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cors());
+
+// Sample root route
+app.get('/', (req, res) => {
+    res.send('Hello, StudyPlanner!');
+});
+
+// Task routes
+app.use('/api/tasks', taskRoutes);
+
+// Start the server
+app.listen(port, () => {
+    console.log(`StudyPlanner app listening at http://localhost:${port}`);
+});
