@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000;
 
 // Middleware to parse JSON and urlencoded data and to enable CORS
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({extended: true}));
 app.use(cors());
 
 // Sample root route

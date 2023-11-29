@@ -9,6 +9,10 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
     console.log(`StudyPlanner app listening at http://localhost:${port}`);
 });
-"scripts": {
-    "start": "nodemon app.js"
+"scripts"
+:
+{
+    "start"
+:
+    "nodemon app.js"
 }
