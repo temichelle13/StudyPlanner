@@ -2,7 +2,7 @@
 /node_modules
 
 # Environment variables
-.env
+*.env
 
 # Logs
 *.log
@@ -37,6 +37,7 @@ Thumbs.db
 .history/
 .vscode/
 .vs/
+*.history/
 
 
 # ignored files
@@ -61,4 +62,5 @@ Thumbs.db
 *.log.*
 *.out
 *.out.*
+*.env
 .VSCODE
