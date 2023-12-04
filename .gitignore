@@ -39,7 +39,7 @@ Thumbs.db
 .vscode/
 .vs/
 *.history/
-
+cspell.json
 
 # ignored files
 *.iml
