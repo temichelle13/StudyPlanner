@@ -1,3 +1,4 @@
+
 const mongoose = require('mongoose');
 
 const taskSchema = new mongoose.Schema({
@@ -14,11 +15,22 @@ const taskSchema = new mongoose.Schema({
     },
     dueDate: {
         type: Date,
-        default: Date.now
+        default: Date.now,
+        validate: {
+            validator: function(value) {
+                return value > Date.now();
+            },
+            message: 'Due date must be in the future.'
+        }
     },
     completed: {
         type: Boolean,
         default: false
+    },
+    priority: {
+        type: String,
+        enum: ['Low', 'Medium', 'High'],
+        default: 'Medium'
     }
 }, { timestamps: true });
 

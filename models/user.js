@@ -1,5 +1,8 @@
+
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
+
+const emailRegex = /^(([^<>()\[\]\.,;:\s@"]+(\.[^<>()\[\]\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 const userSchema = new mongoose.Schema({
     username: {
@@ -12,7 +15,13 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
         unique: true,
-        trim: true
+        trim: true,
+        validate: {
+            validator: function(email) {
+                return emailRegex.test(email);
+            },
+            message: 'Please enter a valid email address.'
+        }
     },
     password: {
         type: String,
@@ -28,9 +37,7 @@ userSchema.pre('save', async function(next) {
     next();
 });
 
-// Method to check password
-userSchema.methods.comparePassword = function(candidatePassword) {
-    return bcrypt.compare(candidatePassword, this.password);
-};
+// NOTE: Implement rate limiting or account lockout strategies for enhanced security
+// Consider using middleware or a library for this purpose
 
 module.exports = mongoose.model('User', userSchema);

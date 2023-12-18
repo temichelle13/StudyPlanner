@@ -1,32 +1,32 @@
+
 const express = require('express');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
 const router = express.Router();
 
-// User registration
+// User registration with request body validation
 router.post('/register', async (req, res) => {
+    // Validate request body here
     try {
         const user = new User(req.body);
         await user.save();
-        res.status(201).send({ user });
+        const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
+        res.status(201).send({ user, token });
     } catch (error) {
         res.status(400).send(error);
     }
 });
 
-// User login
+// User login with request body validation
 router.post('/login', async (req, res) => {
+    // Validate request body here
     try {
-        const user = await User.findOne({ email: req.body.email });
-        if (!user || !await bcrypt.compare(req.body.password, user.password)) {
-            throw new Error('Invalid login credentials');
-        }
-
-        const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET);
+        const user = await User.findByCredentials(req.body.email, req.body.password);
+        const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
         res.send({ user, token });
     } catch (error) {
-        res.status(400).send({ error: error.message });
+        res.status(400).send(error);
     }
 });
 
