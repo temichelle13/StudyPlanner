@@ -1,0 +1,49 @@
+            - name: Install and configure AppMap
+  # You may pin to the exact commit or the version.
+  # uses: getappmap/install-action@9eac587c6d5361ce9c3594b2cadcc0be474965ab
+  uses: getappmap/install-action@v1
+  with:
+    # Command working directory.
+    directory: # optional
+    # appmap.yml configuration contents.
+    appmap-config: npm
+    # Type of project to be configured. Valid values include bundler, yarn, npm, gradle, maven, 
+pip, pipenv, and poetry. Consult https://appmap.io/docs/add-appmap-to-a-project.html for
+more information.
+
+    project-type: # optional
+    # Build file to be configured, in case of ambiguity. This is an advanced option.
+
+    build-file: # optional
+    # Installer name to be used, in case of ambiguity. This is an advanced option.
+
+    installer-name: # optional
+    # URL to the AppMap tools. By default, the latest version will be downloaded and installed.
+    tools-url: # optional
+    # The GitHub token to use with the GitHub API to enumerate AppMap Tools releases.
+Most commonly, you'll use `secrets.GITHUB_TOKEN`, which is automatically provided by GitHub.
+
+    github-token: # optional, default is ${{ github.token }}
+    # Add the .appmap directory to .gitignore, if it's not already present.
+
+    ignore-dot-appmap: # optional, default is true
+    # Install the AppMap command-line tools.
+
+    install-appmap-tools: # optional, default is true
+    # Install the and configure the AppMap language library.
+
+    install-appmap-library: # optional, default is true
+    # Create a patch file of changes made by the installer.
+
+    build-patch-file: # optional, default is true
+    # Path specification to use when creating the patch file. If the patch file includes files that you don't want
+to commit, you can use this option to exclude them.
+
+    diff-path-spec: # optional, default is . ':(exclude,top)vendor' ':(exclude,top)node_modules'
+    # Expected value of the appmap_dir in appmap.yml. If this input is provided, the action will verify that the
+configured appmap_dir matches the expected value. If the value does not match, the action will fail.
+
+    expected-appmap-dir: # optional
+    # Enable verbose logging.
+    verbose: # optional
+          
