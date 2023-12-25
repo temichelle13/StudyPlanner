@@ -4,15 +4,15 @@
   "description": "AI assisted study planner",
   "main": "app.js",
   "scripts": {
-  "start": "nodemon app.js"
-}
-
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Tea Larson-Hetrick",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.18.2"
+    "start": "nodemon app.js"
   }
+
+  "start": "node app.js",
+  "test": "echo \"Error: no test specified\" && exit 1"
+},
+"author": "Tea Larson-Hetrick",
+"license": "ISC",
+"dependencies": {
+"express": "^4.18.2"
+}
 }

@@ -1,32 +1,20 @@
-// Import express and set up the router
-const express = require('express');
+import express from 'express';
 const router = express.Router();
 
-// GET all tasks
-router.get('/', (req, res) => {
-    // Here you will eventually interact with a database or data store
+router.get('/', (_, res) => {
     res.send('Tasks retrieved');
 });
 
-// POST a new task
-router.post('/', (req, res) => {
-    // Logic to add a new task
+router.post('/', (_, res) => {
     res.send('Task added');
 });
 
-// PUT to update a task
 router.put('/:id', (req, res) => {
-    // Logic to update a task based on the id
-    res.send('Task updated');
+    res.send(`Task with id ${req.params.id} updated`);
 });
 
-// DELETE a task
 router.delete('/:id', (req, res) => {
-    // Logic to delete a task based on the id
-    res.send('Task deleted');
+    res.send(`Task with id ${req.params.id} deleted`);
 });
 
-// Export the router
-module.exports = router;
-(alias) const export =: Route;r
-import export =
+export default router;

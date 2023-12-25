@@ -1,0 +1,64 @@
+# Node modules
+/node_modules
+
+# Environment variables
+.env
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDE / Editor
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Production build
+/dist
+
+# Temporary files
+/temp
+
+# Default ignored files
+/shelf/
+/workspace.xml
+
+# Editor-based HTTP Client requests
+
+
+# ignored folders
+.idea/
+.gradle/
+.history/
+.vscode/
+.vs/
+
+
+# ignored files
+*.iml
+*.ipr
+*.iws
+*.bak
+*.DS_Store
+*.class
+*.war
+*.ear
+*.jar
+*.zip
+*.tar.gz
+*.rar
+*.sql
+*.pdf
+*.xls
+*.idea/workspace.xml
+*.iml
+*.log
+*.log.*
+*.out
+*.out.*
+.VSCODE

@@ -2,11 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyPlanner</title>
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> // Add viewport meta element
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <h1>StudyPlanner</h1>
+    </header>
+    <main>
+        <section id="task-form-section">
+            <form id="taskForm">
+                <input type="text" id="taskTitle" placeholder="Enter task title" required>
+                <textarea id="taskDescription" placeholder="Enter task description"></textarea>
+                <input type="date" id="taskDueDate">
+                <button type="submit">Add Task</button>
+            </form>
+        </section>
+        <section id="task-list-section">
+            <div id="taskList"></div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2023 StudyPlanner</p>
+    </footer>
+    <script src="main.js"></script>
+		
 </body>
 </html>
 <html lang="en">
@@ -62,5 +85,4 @@
 </head>
 <body>
     
-</body>
 </html>

@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "AI assisted study planner",
   "main": "app.js",
-  "scripts":{
-
-"start": "nodemon app.js"
+  "scripts": {
+    "start": "nodemon app.js"
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Tea Larson-Hetrick",
