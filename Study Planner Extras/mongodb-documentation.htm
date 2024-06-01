@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:fb="https://ogp.me/ns/fb#">
+<head>
+  <title>
+    MongoDB Courses and Trainings | MongoDB University
+  </title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://d36ai2hkxl16us.cloudfront.net/v3/dist/2826-92f36b1b3f9964060245.css" media="all" rel="stylesheet" />
+  <link href="https://d36ai2hkxl16us.cloudfront.net/v3/dist/1198-c0421aab1ada6a70f207.css" media="all" rel="stylesheet" />
+
+
+    <meta id="meta-description" name="description" content="Discover our MongoDB Database Management courses and begin improving your CV with MongoDB certificates. Start training with MongoDB University for free today.">
+
+    <link rel="shortcut icon" href="https://d36ai2hkxl16us.cloudfront.net/thoughtindustries/image/upload/a_exif,c_fit,t_ti_favicon_v4/v1/course-uploads/ae62dcd7-abdc-4e90-a570-83eccba49043/aw372gbiwffg-MongoDBFavIcon1.png">
+
+      <link id="appearance-stylesheet" rel="stylesheet" href="/appearance/company/c7df8d1d-1add-4628-a7d9-6100285a1229--15eef2f2e1--v2.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="//d36ai2hkxl16us.cloudfront.net/highlight-atelier-cave-light.css">
+<!-- <link rel="stylesheet" href="https://poc-nav-for-ti.s3.amazonaws.com/css/static-styles.min.css" /> -->
+
+<script>
+  !function(e,n){var t=document.createElement("script"),o=null,x="pathway";t.async=!0,t.src='https://'+x+'.mongodb.com/'+(e?x+'-debug.js':''),document.head.append(t),t.addEventListener("load",function(){o=window.pathway.default,(n&&o.configure(n)),o.createProfile("mongodbcom").load(),window.segment=o})}();
+</script>
+
+<!--Hover styles for the wista rating widget-->
+<style>
+.star:hover {
+  fill: #00ED64;
+}
+
+#star-widget{
+  transition: all 0.5s ease;
+}
+
+#widget-container {
+  transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 414px) {
+  #star-widget {
+    width: 17rem !important;
+    height: 58px !important;
+    padding: 25px 20px !important;
+  }
+  
+  #widget-container{
+    flex-direction: column;
+  }
+  
+  #message {
+    padding: 0 !important;
+    margin: 20px;
+    align-self: center;
+  }
+  
+  #star-text {
+    font-size: 14px !important;
+    margin-bottom: 15px;
+  }
+  
+  #stars {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .star-container {
+    margin-left: 0 !important;
+    margin-right: 23px;
+  }
+}
+</style>
+
+<script src="https://cdn-ti.learn.mongodb.com/widget/index.js"></script>
+<script>
+  ;(function() {
+    var pushState = history.pushState;
+    var replaceState = history.replaceState;
+
+    history.pushState = function() {
+        pushState.apply(history, arguments);
+        window.dispatchEvent(new Event('pushstate'));
+        window.dispatchEvent(new Event('locationchange'));
+    };
+
+    history.replaceState = function() {
+        replaceState.apply(history, arguments);
+        window.dispatchEvent(new Event('replacestate'));
+        window.dispatchEvent(new Event('locationchange'));
+    };
+
+    window.addEventListener('popstate', function() {
+        window.dispatchEvent(new Event('locationchange'))
+    });
+})();
+</script>
+
+<script src="https://cdn-ti.learn.mongodb.com/microsites/unified-nav/unified-nav.js"></script>
+<script src="https://cdn.optimizely.com/js/21197170553.js"></script> 
+
+<script src="https://cdn-ti.learn.mongodb.com/scripts/ti.js"></script>
+<link rel="stylesheet" href="https://cdn-ti.learn.mongodb.com/scripts/styles.css" />
+
+<!--<link rel="stylesheet" href="https://poc-nav-for-ti.s3.amazonaws.com/css/custom.min-093022.css" />-->
+<!--<link rel="stylesheet" href="https://poc-nav-for-ti.s3.amazonaws.com/css/consistent-styles.min-093022.css" />-->
+
+
+
+
+
+  <script nonce="wc56uxsd10v7zlobzhcutx58">!(window.CSS && window.CSS.supports && window.CSS.supports('--a', 0)) && document.write('<script src="https://d36ai2hkxl16us.cloudfront.net/css-vars-ponyfill-ti.2.4.2.min.js"><\/script><script nonce="wc56uxsd10v7zlobzhcutx58">cssVars({silent: false});<\/script>');</script>
+</head>
+<body>
+
+<!--[if lt IE 11]>
+  <div class="alert-box alert-box--large alert-box--centered alert">
+    Sorry, your browser is not supported. Please upgrade to <a style="text-decoration: underline" href="https://www.google.com/chrome/">Chrome</a>, <a style="text-decoration: underline" href="https://www.getfirefox.com/">Firefox</a>, or a newer version of <a style="text-decoration: underline" href="https://windows.microsoft.com/en-us/internet-explorer/products/ie/home/">Internet Explorer</a>.
+  </div>
+<![endif]-->
+
+<noscript>
+  <div class="alert-box alert-box--centered alert">
+    You need to <a style="text-decoration: underline" href="https://support.google.com/adsense/answer/12654?hl=en">enable javascript</a> to view this website.
+  </div>
+</noscript>
+
+  <div id="learner">
+    <div id="lms"></div>
+  </div>
+
+<script nonce="wc56uxsd10v7zlobzhcutx58" type="text/javascript">
+  window.audio5jsSwfPath = 'https://d36ai2hkxl16us.cloudfront.net/audio5js.swf';
+  EmberENV = {LOG_MODULE_RESOLVER: false, FEATURES: {'query-params-new': true, 'ember-routing-drop-deprecated-action-style': true}, FORCE_JQUERY: true};
+</script>
+
+<script type="text/javascript" src="https://d36ai2hkxl16us.cloudfront.net/v3/dist/vendor.gulp.bundle.43dedf9b.js"></script>
+
+<script type="text/javascript" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+
+  <script type="text/javascript" src="https://js.stripe.com/v3/"></script>
+
+<script nonce="wc56uxsd10v7zlobzhcutx58" type="text/javascript">
+    CLDR.defaultLanguage = 'en';
+
+    window.stripePublishableKey = 'pk_test_51L1UZOAI2onXg3vocGnowfiOkg39pqXgfMe5TEGUaeaM7NMTEnpNc0XW7Z0ApEwMzGJvsOyb9xG8CjHHra2sdK1r00w9gEwjrD';
+
+  Ember.I18n.translations = {"home.meta-title":"{{companyName}} Courses and Trainings | MongoDB University","home.meta-description":"Discover our MongoDB Database Management courses and begin improving your CV with MongoDB certificates. Start training with MongoDB University for free today.","catalog.meta-title":"{{companyName}} Course Catalog Homepage | MongoDB University","catalog.meta-description":"Search through our catalog of courses to find the best MongoDB course for you. Sign up for free today and get started on your MongoDB University Certification.","catalog.back":"Back to Catalog","catalog.sort-by":"Sort by","catalog.sort-updated":"Last Updated","catalog.sort-created":"Most Recent","catalog.sort-title":"Title","catalog.sort-publish-date":"Publish Date","catalog.sort-course-start-date":"Start Date","catalog.sort-relevance":"Relevance","catalog.display-type-list":"List","catalog.display-type-grid":"Grid","catalog.display-type-calendar":"Calendar","catalog.location":"Location","catalog.date-time":"Date & Time","catalog.price":"Price","catalog.location-online":"Online","catalog.location-in-person":"In Person","register.meta-title":"Register - {{companyName}}","register.meta-description":"{{companyName}} online learning platform registration","register-submit":"Register","course.register-text":"Register now to gain access to this course.","course.register-button":"Register Now","support.meta-title":"Support - {{companyName}}","support.meta-description":"","support.search-title":"Search FAQs","support.search-results-title":"Search Results:","support.no-results":"Nothing found matching your query, please try again.","support.search-back-link":"Back to FAQs","course-group-detail.meta-title":"{{courseGroupName}} - {{companyName}}","course-group-detail.meta-description":"{{courseGroupDescription}}","course-group-isbn":"ISBN:","course-group-source":"Source:","course-group-authors.one":"Author:","course-group-authors.other":"Authors:","course-group-instructors.one":"Instructor:","course-group-instructors.other":"Instructors:","bundle-detail.meta-title":"{{bundleName}} - {{companyName}}","bundle-detail.meta-description":"{{bundleDescription}}","discount-group-detail.meta-title":"{{discountGroupName}} - {{companyName}}","discount-group-detail.meta-description":"{{discountGroupDescription}}","pickable-group-detail.meta-title":"{{pickableGroupName}} - {{companyName}}","pickable-group-detail.meta-description":"{{pickableGroupDescription}}","learning-path-detail.meta-title":"{{learningPathName}} - {{companyName}}","learning-path-detail.meta-description":"{{learningPathDescription}}","product-detail.meta-title":"{{productName}} - {{companyName}}","product-detail.meta-description":"{{productDescription}}","video.meta-title":"{{videoTitle}} - {{companyName}}","article.meta-title":"{{articleTitle}} - {{companyName}}","article.meta-description":"{{articleDescription}}","article.rate-this":"Rate This!","article.rated":"Rated!","article.tags.one":"Tag","article.tags.other":"Tags","article.see-tags":"See All Tags","article.related-content":"Related Items","article.search-button":"Go","article.downloads":"Downloads","article.select-download":"Select A File To Download","embed-widget.handle":"My Learning","embed-widget.course-status-heading":"Learning","embed-widget.learning-paths-status-heading":"Pathways","embed-widget.featured-content-heading":"Featured Content","embed-widget.achievements-heading":"Achievements","rating.submit":"Submit","page.forbidden-header":"You are not authorized to view this page","page.forbidden-body.one":"To access this page, you must complete the following prerequisite:","page.forbidden-body.other":"To access this page, you must complete the following prerequisites:","search":"Search","lesson":"Lesson","topic":"Page","section":"Section","select-section":"Select a Section","course":"Course","hide-menu":"Hide","audio-play":"Play Audio","audio-play-playing":"Playing Audio","audio-processing":"Audio Processing","presentation-audio-play":"Play","presentation-audio-pause":"Pause","more":"more","next.section":"Next","next.lesson":"Next","next.topic":"Next","continue-to.section":"Continue to Next Section","continue-to.lesson":"Continue to Next Lesson","continue-to.topic":"Continue to Next Page","prev.section":"Previous","prev.lesson":"Previous","prev.topic":"Previous","return-to.section":"Return to Previous Section","return-to.lesson":"Return to Previous Lesson","return-to.topic":"Return to Previous Page","please-wait":"Please Wait…","replace":"Replace","undo":"Undo","remove":"Remove","all":"All","not-found.title":"Not Found","not-found":"The page you are looking for could not be found or you have not signed into <a href=\"//learn.mongodb.com/access/saml/login\">learn.mongodb.com</a>. Please login or reach out to <a href=\"mailto:learn@mongodb.com\">learn@mongodb.com</a>","stuck.access-validating":"Please wait while we validate your access…","stuck.click-here":"Click Here","stuck.intro":"Stuck here?","student-dashboard":"My Dashboard","student-dashboard-account-details":"Account Details","student-dashboard-edit-profile":"Edit Profile","completion.course-percent-complete":"Complete","completion.course-percent-viewed":"Content Viewed","completion.course-assignments-complete":"Completed Assignments","completion.course-assessments-passed":"Passed Assessments","completion.course-topic-viewed":"Required Pages Viewed","completion.course-video-viewed":"Required Videos Viewed","completion.course-activity-complete":"Completed Activity","completion.course-meeting-attended":"Meetings Attended","completion.bongo-assignments-completed":"Completed Bongo Assignments","dashboard.meta-title":"Learner Dashboard","dashboard.back":"Back to Dashboard","dashboard.profile":"Profile","dashboard.available":"Available","dashboard.started":"Started","dashboard.completed":"Completed","dashboard.bookmark":"Bookmarks","dashboard.bookmark-save":"Save","dashboard.certificates":"Proof of Completions","dashboard.waitlisted":"Waitlisted","dashboard.credly":"Badges","dashboard.credly-badges":"Credly Badges","dashboard.credly-earned":"Earned","dashboard.credly-expired":"Expired","dashboard.credly-expires":"Expires","dashboard.credly-not-started":"Not Started","dashboard.credly-in-progress":"In Progress","dashboard.credly-completed":"% Completed","dashboard.credly-accept-badge":"Accept the Badge","dashboard.credly-view-badge":"View Badge","dashboard.current":"In Progress ","dashboard.unenroll-waitlist":"Unenroll from Waitlist","dashboard.collaborations":"Collaborations","dashboard.daily-activity":"Daily Activity","dashboard.events":"Events","dashboard.hours":"Total Hours","dashboard.assignments":"Completed Assignments","dashboard.lessons":"Completed Lessons","dashboard.percent-complete":"% Complete","dashboard.certificate-granted":"Certificate Granted","dashboard.certificate-pending":"Certificate Pending","dashboard.certificate-expires":"Certificate expires","dashboard.certificate-expired":"Certificate expired on","dashboard.external-course-label":"External Course","dashboard.activity":"Activity","dashboard.nightly-hint":"This information is updated and verified as part of a nightly process.","dashboard.content-viewed-hint":"Content viewed shows progress toward a “percentage of pages viewed” course completion criterion.","dashboard.account-button-save":"Save","dashboard.account-button-saving":"Saving","dashboard.account-button-saved":"Saved","dashboard.account-title":"Account & Info","dashboard.account":"Account Info","dashboard.account-updated":"Account successfully updated","dashboard.account-profile":"Profile Info","dashboard.account-profile-updated":"Profile successfully updated","dashboard.account-current-email":"You are currently logged in as:","dashboard.account-email-updated":"Email successfully updated","dashboard.account-credit-balance":"Credit Balance","dashboard.account-credit-accounts":"Credit Accounts","dashboard.shared-credit-accounts":"Shared Credit Accounts","dashboard.credit-card":"Credit Card","dashboard.subscriptions":"Subscriptions","dashboard.purchases":"Purchases","dashboard.extended-profile":"Extended Profile","dashboard.account-access-expired":"Access Expired","dashboard.account-add-card":"Add Credit Card","dashboard.account-update-card":"Update Credit Card","dashboard.account-update-card-link":"Click here to update your credit card information.","dashboard.account-card-updated":"Credit card sucessfully updated","dashboard.account-change-card":"Change Credit Card","dashboard.account-change-password":"Click Here to Change Your Password","dashboard.account-subscriptions":"Manage Subscriptions","dashboard.account-manage-subscription":"Manage Subscription","dashboard.account-subscriptions-amount":"Amount displayed is total due at next invoice.","dashboard.account-subscription-canceled":"Canceled:","dashboard.account-subscription-active":"Active Until","dashboard.account-current-cc":"You currently have a {{cardType}} card ending in ***{{last4}} on file.","dashboard.account-multifactor-enabled":"Multifactor authentication is enabled. To disable, please contact your account administrator.","dashboard.account-multifactor-scan":"Scan this code with your multifactor application:","dashboard.account-multifactor-enter-password":"Please enter your current password to activate multifactor authentication:","dashboard.account-multifactor-enter-code":"To finalize your multifactor setup, please enter the code generated by your application:","dashboard.account-multifactor-download":"If you don't have a multifactor application, download","dashboard.archive-warning":"Would you like to continue archiving this course? Doing so will remove this from your dashboard as an In Progress item.","dashboard.reinstate-warning":"Would you like to continue reinstating this course? Doing so will move this back to being In Progress.","dashboard.archives":"Archived Content","dashboard.archived":"Archived","dashboard.waitlist":"Waitlisted","dashboard.switch-to-learner":"Switch to Learner","course-unmet-prerequisites.one":"To access this course, first complete this prerequisite:","course-unmet-prerequisites.other":"To access this course, first complete these prerequisites:","view-certificate":"View Certificate","external-certificate.upload":"Upload Third-Party Certificate","external-certificate.instructions":"Upload a third-party certificate. Please provide details.","external-certificate.submit":"Submit","external-certificate.cancel":"Cancel","course-ended":"Course ended:","filter-no-courses":"Sorry, we were unable to find a match for that search term or category, please try again.","filter-active.one":"Active Filter:","filter-active.other":"Active Filters:","filter-by":"Filter by","course-completed-decal":"Completed!","view-course":"View","start-course":"Register Now","resume-course":"Resume {{contentType}}","not-completed-course":"Not Completed","continue-course":"Continue","reschedule-course":"Reschedule","course-enroll-head":"Enroll Today","course-enroll-head-free":"Enroll Today","course-price":"Price:","course-subscribe-text":"Subscribe for","course-view-details":"View Details","course-add-to-queue":"Add to Queue","course-added-to-queue":"Added to Queue","account":"Account","support":"FAQ's","sign-in":"Sign In","sign-out":"Sign Out","status-page":"Status Page","transcript":"Transcript","transcript.title":"{{companyName}} Transcript","transcript.print":"Print Transcript","transcript.empty":"Transcript Empty","transcript.total":"Total:","transcript.view-certificate":"View","transcript.share-certificate":"Add to LinkedIn Profile","transcript.export":"Export Transcript CSV","reschedule.current":"You are currently enrolled in the following session:","reschedule.select":"Select your session:","reschedule.footer":"If you need to cancel, please contact customer service for more information.","award.your-standing":"Your Standing","award.leaderboard":"Leaderboard","award.you":"You","award.leader":"Leader","accept-invite":"Accept Invite","invite-password":"Create Password","invite-password-confirm":"Confirm Password","reset-password-title":"Reset Password","reset-password-body":"Enter your email below and we will send you a link to reset your password.","reset-password-sent":"Please check your email to continue the password reset process.","signed-out":"You are now signed out.","signed-out-inactivity":"You were signed out due to inactivity.","login-invalid-password":"Invalid email or password.","login-too-many-attempts":"You have made too many log in attempts. Please try again in 30 minutes.","login-disabled":"Your account has been disabled. Please contact your account administrator.","login-password-changed":"Your password has been changed. Please sign in below.","login-new-account":"Your account has been created. Please sign in below.","login-dunning-success":"Your card information has been successfully updated. Please sign in below.","email-address":"Email Address","password":"Password","forgot-password-question":"Forgot your password?","reset-password":"Reset Password","change-password":"Change Password","next-question":"Next","see-results":"See Results","uploading":"Uploading","add-comment":"Add a comment","add-comment-button":"Add Comment","save-comment-button":"Save Comment","replied-to":"Replied to {{name}}","attach-file":"Attach File","file-attached":"File attached","no-file-attached":"No File attached","record-upload-video":"Record/Upload Video","video-attached":"Video attached","comments-label.one":"{{count}} comment","comments-label.other":"{{count}} comments","add-thread-button":"Create Thread","save-thread-button":"Save Thread","no-threads":"Nothing here yet, get started by adding a discussion.","thread-search-placeholder":"Search discussions","no-threads-search-result":"No threads matching your search were found.","thread-posted":"Posted","add-gallery-button":"Add Gallery Item","new-gallery-item-button":"Add To Gallery","gallery-posted":"Posted:","comment.show-more":"Show More","comment.loading-more":"Loading More…","comment.reply":"Reply","comment.cancel-reply":"Cancel","comment.cancel-file":"Cancel","comment.cancel-video":"Cancel","comment.enter-comment":"Enter your comment:","recipe-directions-title":"Directions","recipe-ingredients-title":"Ingredients","recipe-nutrition-title":"Nutrition Facts","recipe-time":"Total Time:","recipe-yield":"Makes:","assignment-due-date":"Assignment Due Date","assignment-files":"Assignment Resources","assignment-submit-heading":"Assignment Submission","assignment-submit-button":"Submit Assignment","assignment-type-submission":"Type Submission","assignment-attach-submission":"Attach Submission","assignment-submitted-label":"Submitted:","assignment-no-submission":"No submission","assignment-view-link":"View Assignment","assignment-cancel":"Cancel","submission-comment":"Enter your comment:","submission-received":"Your assignment submission has been received {{date}}.","submission-received-assessment":"Your submission has been received {{date}}.","submission-grade":"Grade:","submission-grade-complete":"Completed","submission-grade-incomplete":"Incomplete","submission-grade-not-graded":"Not Graded","submission-grade-feedback":"<font size=\"5\">  Instructor Feedback:</font>","sidebar-notes-preview":"You will be able to store notes here.","sidebar-ask-instructor-preview":"You will be able to ask an instructor a question here.","sidebar-lessons":"Lessons","sidebar-discussions":"Discuss","sidebar-gallery":"Gallery","sidebar-workbooks":"Workbooks","sidebar-superquiz":"Quiz Builder","sidebar-meetings":"Meetings","sidebar-notes":"Notes","sidebar-resources":"Resources & Forums","sidebar-resources-empty":"There are no resources available for this course.","sidebar-files":"Files","sidebar-assignments":"Assignments","sidebar-instructor":"Get Support","sidebar-linked-workbooks":"Workbooks","sidebar-linked-workbooks-empty":"You have not created any Workbooks yet.","general-forum-label":"General","thread-label.one":"Thread","thread-label.other":"Threads","thread-sort-by":"Sort by","thread-started-by":"Started by","thread-last-updated":"Last Updated","thread-add-new-button":"Add New Thread","thread-add-new-card":"Join our <a href=\"www.mongodb.com\">discussions</a> here. ","threads-empty-read-only":"Sorry, discussions have been closed.","threads-search-no-results":"Sorry, no discussions matching your search could be found.","forum-label":"Forums","comment-label":"Comments","discussion-label":"Discussion","back-link-lesson":"Back to Lesson","back-link-course":"Back to Course","list-expand":"Expand","list-close":"Close","slideshow-prev-slide":"Prev","slideshow-next-slide":"Next Slide","slideshow-count":"Slide {{index}} of {{total}}","slideshow-skip-info":"Clicking on this arrow will navigate you away from the current page.","slideshow-skip-continue":"Do you wish to continue?","slideshow-skip-ok":"OK","slideshow-skip-cancel":"Cancel","workbook-disable-info":"Please ensure you have filled out every required question (denoted with a *)","workbook-popup-ok":"OK","quiz-summary-enable":"Hide answers until the end of the quiz","quiz-results-title":"Quiz Results","quiz-results-average-time":"Average Time Per Question","quiz-results-suggested-time":"Suggested Time Per Question","quiz-results-total-questions":"Total","quiz-results-answered-questions":"Answered","quiz-results-correct-questions":"Correct","quiz-results-unanswered-questions":"Unanswered","quiz-results-incorrect-questions":"Incorrect","quiz-results-time-limit":"Time Limit","quiz-results-total-time":"Total Time","quiz-results-questions-correct":"You got {{correct}} out of {{total}} correct","quiz-results-questions-pool-correct":"{{correct}} out of {{total}}","quiz-results-review-questions":"Review All Question Results","quiz-results-review-unanswered-questions":"Review All Unanswered Questions","quiz-results-review-your-answer":"Your Answer","quiz-results-review-correct-answer":"Correct Answer","quiz-results-review-incorrect-answer":"Incorrect Answer","quiz-attempts-remaining.one":"One attempt remaining","quiz-attempts-remaining.other":"{{count}} attempts remaining","question-table-add-row":"Add a Row","question-table-delete-row":"Delete a Row","test-results-title":"Test Results","tally-retake-button":"Retake Quiz","quiz-retake-button":"Retake Quiz","test-retake-button":"Retake Test","survey-retake-button":"Retake Survey","workbook-retake-button":"Retake Workbook","survey-complete-button":"Complete Survey","workbook-complete-button":"Complete Workbook","tally-start-button":"Start Quiz","quiz-start-button":"Start Quiz","test-start-button":"Start Test","survey-summary-title":"Survey Answers","workbook-summary-title":"Workbook Answers","tally-start-message":"Quiz","quiz-start-message":"Quiz","test-start-message":"Test","test-attempts-remaining.one":"One attempt remaining","test-attempts-remaining.other":"{{count}} attempts remaining","test-passing-grade":"{{grade}}% required for passing grade","test-results-passed":"You passed!","test-results-failed":"You did not pass.","test-time-limit-reached":"You ran out of time!","quiz-loading-create":"Starting the quiz…","test-loading-create":"Starting the test…","tally-loading-create":"Starting the quiz…","survey-loading-create":"Starting the survey…","workbook-loading-create":"Starting the workbook…","quiz-loading-finish":"Crunching the numbers…","quiz-loading-finish-warning":"Please do not leave this page or your responses will not be recorded.","quiz-loading-stuck":"Stuck here?","quiz-loading-stuck-action":"Try Again","quiz-essay-answer":"Answer:","quiz-essay-response":"Your Answer","quiz-essay-answer-placeholder":"Enter your answer here.","quiz-essay-hide-answer":"Hide Answer","quiz-essay-show-answer":"Show Answer","quiz-essay-review-header":"Content to Review","quiz-essay-question-header":"Question","quiz-replace-file":"Replace File","quiz-clear-response":"Clear Response","quiz-check-answers":"Check Answers","quiz-skip-question":"Skip","question-bank-instructions":"Start by selecting, a single or multiple, questions to the assessment by choosing a category followed by the questions of your choice. To finish adding, make sure to select 'Add to Page' and 'Save'.","workbook-questions.one":"{{count}} question","workbook-questions.other":"{{count}} questions","workbook-view-link":"View Workbook","workbook-view-all":"View All Workbooks","workbook-print":"Print Workbooks","workbook-email":"Email Workbooks","workbook-email-singular":"Email Workbook","workbook-no-workbooks":"No Workbooks…","workbook-no-questions":"No Questions…","workbook-no-print":"No finished workbooks to print.","workbook-complete":"Complete","workbook-incomplete":"Incomplete","linkedworkbook.label":"Label your workbook:","linkedworkbook.next":"Next","linkedworkbook.continue":"Save & Continue","linkedworkbook.reset":"Reset","linkedworkbook.reset-confirmation":"Are you sure? All progress will be reset.","linkedworkbook.new":"Create New","linkedworkbook.print":"Print","linkedworkbook.copy":"Copy","linkedworkbook.edit":"Edit","linkedworkbook.date":"Date:","linkedworkbook.delete":"Delete","linkedworkbook.delete-confirmation":"Are you sure? All answers will be deleted.","linkedworkbook.copy-prompt":"Enter a new name:","linkedworkbook.skip-to-summary":"Skip To Workbook Summary","superquiz-introduction":"Select from the quizzes below and we will build one quiz containing all unanswered or incorrect questions from your previous quiz attempts.","superquiz-selected-default":"0 Selected","superquiz-selected-zero":"{{quizzesCount}} Selected: 0 Questions","superquiz-selected-loading":"{{quizzesCount}} Selected: Loading…","superquiz-selected":"{{quizzesCount}} Selected:","superquiz-questions.one":"{{count}} question","superquiz-questions.other":"{{count}} questions","superquiz-totaltime":"Total Time:","superquiz-selectall":"Select All","superquiz-summary-enable":"Hide answers until the end","superquiz-answered-enable":"Include questions I previously got correct","superquiz-start":"Start Quiz","instructor-assessment.learner-instructions":"An instructor will complete this assessment on your behalf.","instructor-assessment.instructor-instructions":"Search for a learner to complete this assessment on behalf of a learner:","email-capture-continue":"Continue","all-notes":"All Notes","print-notes":"Print Notes","print-recipe":"Print Recipe","print-certificate":"Print Certificate","download-certificate":"Download Certificate","save-note":"Save Note","edit-note":"Edit Note","view-note":"View Note","add-note":"Add Note","delete-note":"Delete Note","delete-confirmation":"Are you sure?","view-download-file-viewer":"View / Download","view-download-audio":"Download Audio","ask-instructor-head":"Need support? Please fill out the form to send us a message.","ask-instructor-button":"Send Message","ask-instructor-sent":"Your message has been sent.","congrats-with-user":"Congratulations, {{name}}!","congrats-no-user":"Congratulations!","you-have-completed":"You've Completed","up-next":"Up Next:","leave-feedback":"Leave us your feedback to help us improve this course.","choose-rating":"Your rating:","article-rating":"Average Rating","exit-course":"Exit","mark-course-completed":"Mark Course Completed","claim-awards":"Claim Awards","claim-awards-info":"Congratulations! To complete this course, select which awards you would like to claim.","claim-awards-submit":"Submit","comment-notify-me":"Notify me of replies to this thread","share-this":"Share your accomplishments with your friends","share-text":"I just completed {{sectionTitle}} on {{companyName}}","enter-two-factor-error":"Invalid verification code. Contact your account administrator if you need to have two-factor authentication disabled.","enter-two-factor-code":"2-Step Verification","enter-two-factor-code-detail":"Enter the verification code generated by your mobile application.","enter-two-factor-label":"Enter code","enter-two-factor-verify":"Verify","close":"Close","resources-general":"General","other-courses":"Check out other courses","mobile-back-button":"Back","mobile-menu-button":"","mobile-purchase-button":"Buy Now","progress-percentage-completed":"Completed","already-enrolled-sign-in":"Already Enrolled? Sign In","header-cart":"Cart","cart.instructor-access-added":"Instructor Access Added","cart.instructor-access-headline":"Would you like to add expert personal instruction to this course?","cart.instructor-access-body":"By adding premium instruction to this course you will avail of one-on-one  expert feedback, coaching and more.","cart.add-instructor-button":"Add Instructor","cart.header.one":"Your Basket ({{count}} item)","cart.header.other":"Your Basket ({{count}} items)","cart.checkout":"Checkout","coupon-apply":"Apply","bundle.learn-button":"Learn More","bundle.yearly-disclaimer":"When subscribed yearly","bundle.subscribe-button":"Subscribe","bundle.subscribe-monthly-button":"Subscribe Monthly","bundle.subscribe-yearly-button":"Subscribe Yearly","discount-group.price-free":"Free","discount-group.enroll-button":"Enroll Now","discount-group.collection-enroll-head":"Enroll in This Collection Today","discount-group.course-count.one":"Includes One Course","discount-group.course-count.other":"Includes {{count}} Courses","discount-group.learning-path-count.one":"Includes One Learning Path","discount-group.learning-path-count.other":"Includes {{count}} Learning Paths","discount-group.courses-head.one":"{{count}} Course Included in this Collection","discount-group.courses-head.other":"{{count}} Courses Included in this Collection","discount-group.learning-paths-head.one":"{{count}} Learning Path Included in this Collection","discount-group.learning-paths-head.other":"{{count}} Learning Paths Included in this Collection","discount-group.generic-head":"What's Included in this Collection","learning-path.one":"Courses & Learning Path","learning-path.other":"Courses & Learning Paths","learning-path.view":"View","learning-path.start":"Register Now ","learning-path.continue":"Continue","learning-path.completion-criteria":"Completion Criteria","learning-path.milestone.one":"Milestone","learning-path.milestone.other":"Milestones","learning-path.required":"Required","learning-path.elective":"Elective","learning-path.minimum-electives":"Minimum Electives","learning-path.required-courses":"Required Content","learning-path.enroll-head":"Enroll Today","learning-group.price-free":"Free","learning-path.enroll-button":"Register Now ","learning-path.gift":"Gift This Learning Path","learning-path.select-session":"Select Session","learning-path.date-time-label":"Date and Time","learning-path.location-label":"Location","learning-path.session-select-message":"This course runs during the following dates:","learning-path.related-learning-paths-heading":"Related Content","learning-path.return-to-banner":"Return to Learning Path","pickable-group.collection-enroll-head":"Enroll in This Collection Today","pickable-group.courses-head.one":"{{count}} Course Included in this Collection","pickable-group.courses-head.other":"{{count}} Courses Included in this Collection","pickable-group.learning-paths-head.one":"{{count}} Learning Path Included in this Collection","pickable-group.learning-paths-head.other":"{{count}} Learning Paths Included in this Collection","pickable-group.enroll-button":"Enroll Now","pickable-group.gift":"Gift This Collection","pickable-group.course-count.one":"{{count}} course","pickable-group.course-count.other":"{{count}} courses","pickable-group.learning-path-count.one":"{{count}} learning path","pickable-group.learning-path-count.other":"{{count}} learning paths","collection.course-link":"View Course Details","collection.learning-path-link":"View Learning Path Details","primary-bundle-intro":"All courses only","course.detail-button":"Details","course.price":"Price:","course.enroll-button":"Register","course.enroll-waitlist-button":"Join Waitlist","course.external-purchase-link":"Purchase Course Now","course.look-inside":"","course.select-session":"<font size=\"5\">Select the session you wish to attend:</font>","course.or":"or","course.per-year":"per year","course.per-month":"per month","course.subscribe":"Subscribe to all courses","course.share-text":"Check out {{course}} on {{company}} #MongoDB","course.runs":"Course Runs:","course.price-free":"Free","membership-price-label":"Non-Member Price:","content-access":"Content Access:","runs":"Runs:","join":"Join","course.starts":"Course Starts:","course.prerequisites":"You have not met the prerequisites.","course.purchase-session":"Show Purchasing Options Or Gift","course.waitlist-text":"Notify me when this course is available for purchase:","course.waitlist-confirmation":"Thanks! We'll let you know when this course is ready.","course.email-capture-text":"Enter your email address to access this course:","course.related-courses-heading":"Related Content","course.meetings-tab-heading":"Meetings","product.detail-button":"View Details","product.add-to-cart":"Add to basket","product.continue":"Continue Shopping","product.related-products-heading":"Related Products","product.description":"Description","product.price":"Price:","client-subscription.subscribe":"Subscribe Now","client-subscription.tier-item.one":"{{count}} seat: {{price}} / year","client-subscription.tier-item.other":"{{count}} seats: {{price}} / year","client-subscription.tier-item-admin.one":"{{count}} seat","client-subscription.tier-item-admin.other":"{{count}} seats","bulk-purchase.tier-item.one":"{{count}} seat: {{price}}","bulk-purchase.tier-item.other":"{{count}} seats: {{price}}","catalog-search-header":"Browse","catalog-search-placeholder":"Search for content","course.have-coupon":"Have a coupon?","course.gift":"Gift this course","course.enter-coupon":"Enter coupon code","product.gift":"Gift this product","discount-group.gift":"Gift this collection","bundle.gift":"Gift this subscription","course.includes-title":"What's Included","course.includes-item-1":"Access your courses anytime, anywhere, with a computer, tablet or smartphone","course.includes-item-2":"Videos, quizzes and interactive content designed for a proven learning experience","course.includes-item-3":"Unlimited access.  Take your courses at your time and pace","home.need-help":"Need Help?","home.contact-support":"Contact Support","home.admin-access":"Manager Access","course-already-purchased":"Already Purchased","cart.empty":"Your cart is empty.","coupon":"Coupon Code","add-coupon-code":"Add Coupon Code","cart.coupon":"Coupon:","coupon-applied":"Coupon Applied.","quantity":"Quantity:","total":"Total:","tax":"Tax:","shipping":"Shipping:","total-due-now":"Total Due Today:","purchase":"Place Your Order","variation":"Variation:","shipping-method":"Shipping Method","free":"Free","removed":"This item has been removed from your cart.","restore":"Restore item","account-setup":"Account Setup","already-member":"Already a Member?","already-registered":"You are registered. Please click below.","login":"Sign In","checkout.page-title":"Secure Checkout","payment-information":"Payment Information","free-purchase":"This purchase is free!","card-expiration":"Card Expiration","card-will-be-charged":"Your card ending in ****{{last4}} will be charged.","logged-in":"You are logged in as {{email}}","additional-information":"Additional Information","checkout.validated-address-copy":"We found some issues with the address you entered. Choose this address if you'd like to use our corrected version. Otherwise, place your order below.","checkout.no-validated-address-found-copy":"Please check your shipping address before purchasing.","checkout.corrected-address":"Our Corrected Address","checkout.choose-validated-address":"Choose Corrected Address","checkout.current-address-info":"Current Address Information","checkout.continue-to-checkout":"Continue To Checkout","checkout.confirmed":"Order Confirmed","checkout.confirmed-waitlist":"Waitlist Enrollment Confirmed!","checkout.confirmed-text":"Thank you for your order! Confirmation details are below. We have also emailed a receipt to {{email}}.","checkout.confirmed-text-waitlist":"Thank you for joining the waitlist. We will let you know once a spot becomes available with the email provided. We have also emailed a receipt to {{email}} regarding your waitlist enrollment.","checkout.confirmed-gift-text":"Thank you for your gift purchase! We will email the gift recipient on the date you specified. We have also emailed a receipt to you at {{email}}.","checkout.will-be-shipped-to":"Will be shipped to:","checkout.shipping-method-via":"via","checkout.view-courses":"Go to Dashboard","checkout.view-other-courses":"View Other Courses","checkout.return-to-dashboard":"Return to Dashboard","checkout.global-terms":"{{companyName}} Terms & Conditions","checkout.recipient-name":"Recipient Name","checkout.address-1":"Address 1","checkout.address-2":"Address 2","checkout.city":"City","checkout.state":"State","checkout.region":"Province/Region","checkout.zip":"Zip Code","checkout.country":"Select Country","checkout.telephone":"Phone Number","checkout.telephone-hint":"Prefix with + for international phone numbers","checkout.subscription-opt-in":"I agree to purchase a recurring subscription for {{price}} {{interval}}","checkout.subscription-opt-in-error":"Please agree to purchase the recurring subscription.","with-instructor-access":"With Instructor Access","without-instructor-access":"Without Instructor Access","terms-and-conditions":"Terms & Conditions","terms-and-conditions-company-name":"{{companyName}} Terms & Conditions","terms-and-conditions-ti":"Thought Industries Terms & Conditions","terms-and-conditions-joiner":"and the","agree-terms":"I agree to the","newsletter-signup":"I would like to receive email updates about upcoming courses and general news.","coupon-applied-email":"Coupon Applied:","gift-header":"Wrap your gift","mark-video-completed":"Mark As Watched","must-reset-password":"To gain access to your account, you will have to reset your password. Please check your email to continue the password reset process. After resetting your password, you'll be able to login.","expired-account":"Whoops! It looks like the credit card on file for your subscription has expired. Please click the button below to update your billing information so that you can continue access the school. If you feel that you are receiving this message in error feel free to contact customer service.","dunning-renew-subscriptions":"Renew subscriptions:","dunning-header":"Update Subscription","dunning-action":"Update Subscription","microsite-closed":"This school is closed right now","relatedProducts.checkout":"Recommended for you…","enter-payment-info":"Enter Payment Information","shipping-info":"Shipping Information","address-info":"Address Information","edit-address-info":"Edit Address Information","onboarding-survey":"Extended Profile","onboarding-survey-save":"Save & Continue","onboarding-survey-welcome":"Thanks for Signing Up. Please fill out the following information before you continue.","edit-onboarding-survey":"Edit Extended Profile","notebook-placeholder":"Enter your note…","notebook-submit":"Save Note","notebook-saved":"Note Saved","notebook-view":"View Notes","note-saved":"Saved Notes","subscription-cancel-description":"Cancelled subscriptions remain active from date of cancellation until your next renewal date.","user-details":"Before proceeding, please fill out the following information.","update-subscription":"Update Subscription","cancel-subscription":"Cancel Subscription","subscription-updated":"Subscription Updated","manage-subscription":"Manage Your Subscription","manage-subscription.next-renewal":"Next Renewal Date","redemption-code.placeholder":"Enter Code Here","redemption-code.validate":"Validate","redemption-code.validated":"Validated!","redemption-code.validating":"Validating…","redemption-code.redeem-code":"Redeem","redemption-code.redeem-code-preloaded":"Register","redemption-code.redeem-code-manual-validated":"Congrats, your code has been validated!","redemption-code.preloaded-already-redeemed-error":"Please sign in to continue.","redemption-code.preloaded-code-not-found-error":"Sorry, we could not find what you are looking for. Please check the URL and try again.","redemption-code.manual-already-redeemed-error":"This code has already been redeemed. Please sign in to access the school.","redemption-code.manual-code-not-found-error":"Code not found. Please check your code and try again.","redemption-code.manual-code-expired":"Sorry, this code has expired and is no longer valid.","redemption-code.redeem-course-copy-not-signed-in-preloaded-code":"Fill in your details and click register to access the school.","redemption-code.redeem-course-copy-signed-in-manual-code":"Fill in a code below, click validate, and then redeem your code.","redemption-code.redeem-course-copy-not-signed-in-manual-code":"Fill in your details, validate your redemption code, and click redeem to access the school.","redemption-code.add-redemption-code":"+ Add Another Code","redemption-code.limit-reached":"Sorry, the redemption limit has been reached","redemption-code.view-codes":"View Redemption Codes","register-invalid-code-alert":"You have not validated any redemption codes. Please try again.","scorm.popup":"Open Content In New Window","scorm.launching":"Launching…","scorm.popup-launched":"Your content has been opened in a popup. When you have completed your content, please close the window.","scorm.popup-failed":"Your content window did not pop open correctly.","scorm.popup-failed-link":"Click here to open the window","scorm.viewer.launch":"Launch","lti.completed":"Completed!","client.one":"Panorama","client.other":"Panorama","license.one":"Group","license.other":"Groups","license-select.prompt":"Select a Dashboard","license-select.heading":"Welcome to {{clientName}}","license-select.intro":"To continue, please select the dashboard you'd like to enter below.","license-select.footer":"You will be able to navigate from dashboard to dashboard once you have entered the site","license-select.button":"Enter","license.ref1":"License Reference 1","license.ref2":"License Reference 2","license.ref3":"License Reference 3","license.ref4":"License Reference 4","license.ref5":"License Reference 5","license.ref6":"License Reference 6","license.ref7":"License Reference 7","license.ref8":"License Reference 8","license.ref9":"License Reference 9","license.ref10":"License Reference 10","master-license":"Master License","meeting":"Meeting:","topic.text":"Text","topic.slideshow":"Slideshow","topic.presentation":"Presentation","topic.image":"Interactive","topic.video":"Video","topic.quiz":"Quiz","topic.test":"Test","topic.survey":"Survey","topic.workbook":"Reflection","topic.tally":"Tally","topic.meetingInfo":"Meeting","topic.listRoll":"List Roll","topic.lti":"LTI Launch","topic.ad":"Ad","topic.embed":"HTML Embed","topic.assignment":"Assignment","topic.flipCardSet":"Flip Cards","topic.pdfViewer":"PDF Viewer","topic.notebook":"Note Book","topic.recipe":"Recipe","topic.highlightZoneSet":"Highlight Zones","topic.highlightZoneQuiz":"Highlight Zone Challenge","topic.surveyGizmo":"Alchemer","topic.discussionBoard":"Discussion Board","topic.highlightZoneQuizCorrect":"Correct!","topic.highlightZoneQuizInCorrect":"Incorrect","topic.highlightZoneQuizTryAgain":"try again.","topic.highlightZoneQuizAllCorrect":"Congratulations, you selected everything correctly!","topic.shareableContentObject":"SCORM","topic.xApiObject":"xAPI","topic.audio":"Audio","topic.matchPairSet":"Match Pairs","topic.matchPairCorrect":"Correct!","topic.matchPairIncorrect":"Incorrect Try Again","topic.matchPairSetCorrect":"Congratulations, you matched all items correctly!","topic.matchPairSetInstruction":"Select The Corresponding Match Below","topic.socialShareCardSet":"Social Share Cards","topic.bongo":"Bongo","wysiwyg.html":"HTML","wysiwyg.bold":"Bold","wysiwyg.format":"Format","wysiwyg.image":"Image","wysiwyg.table":"Table","wysiwyg.file":"File","wysiwyg.link":"Link","wysiwyg.align":"Align","wysiwyg.text-color":"Text Color","wysiwyg.text-color-text":"Text","wysiwyg.text-color-highlight":"Highlight","wysiwyg.font-size":"Size","wysiwyg.font-size-remove":"Remove Font Size","wysiwyg.alignment":"Alignment","wysiwyg.fontcolor":"Font Color","wysiwyg.backcolor":"Back Color","wysiwyg.fontsize":"Change Font Size","wysiwyg.removefontsize":"Remove Font Size","wysiwyg.italic":"Italic","wysiwyg.deleted":"Strikethrough","wysiwyg.underline":"Underline","wysiwyg.bold-abbr":"B","wysiwyg.italic-abbr":"I","wysiwyg.deleted-abbr":"S","wysiwyg.underline-abbr":"U","wysiwyg.lists":"Lists","wysiwyg.link-insert":"Insert link","wysiwyg.link-edit":"Edit link","wysiwyg.link-in-new-tab":"Open link in new tab","wysiwyg.unlink":"Unlink","wysiwyg.cancel":"Cancel","wysiwyg.close":"Close","wysiwyg.insert":"Insert","wysiwyg.save":"Save","wysiwyg.delete":"Delete","wysiwyg.text":"Text","wysiwyg.edit":"Edit","wysiwyg.title":"Title","wysiwyg.image_position":"Position","wysiwyg.paragraph":"Normal text","wysiwyg.quote":"Quote","wysiwyg.code":"Code","wysiwyg.heading1":"Heading 1","wysiwyg.heading2":"Heading 2","wysiwyg.heading3":"Heading 3","wysiwyg.heading4":"Heading 4","wysiwyg.heading5":"Heading 5","wysiwyg.heading6":"Heading 6","wysiwyg.filename":"Name","wysiwyg.optional":"optional","wysiwyg.unorderedlist":"Unordered List","wysiwyg.orderedlist":"Ordered List","wysiwyg.outdent":"Outdent","wysiwyg.indent":"Indent","wysiwyg.horizontalrule":"Insert Horizontal Rule","wysiwyg.upload-label":"Drop file here or click","wysiwyg.accessibility-help-label":"Rich text editor","wysiwyg.caption":"Caption","wysiwyg.bulletslist":"Bullets","wysiwyg.numberslist":"Numbers","wysiwyg.insert_table":"Insert Table","wysiwyg.insert_row_above":"Add Row Above","wysiwyg.insert_row_below":"Add Row Below","wysiwyg.insert_column_left":"Add Column Left","wysiwyg.insert_column_right":"Add Column Right","wysiwyg.add_head":"Add Head","wysiwyg.delete_head":"Delete Head","wysiwyg.delete_column":"Delete Column","wysiwyg.delete_row":"Delete Row","wysiwyg.delete_table":"Delete Table","wysiwyg.align-left":"Align text to the left","wysiwyg.align-center":"Center text","wysiwyg.align-right":"Align text to the right","wysiwyg.align-justify":"Justify text","wysiwyg.none":"None","wysiwyg.left":"Left","wysiwyg.center":"Center","wysiwyg.right":"Right","powered-by":"Powered By","multi-factor-verify":"Verify","survey-responses":"Survey Responses","enter-password":"Enter with password:","password-placeholder":"Password","password-enter":"Enter","multi-factor-authentication":"Multi-Factor Authentication","already-have-account":"Already have an account?","sign-in-here":"Sign in here","register-first-name":"First Name","register-last-name":"Last Name","register-email":"Email Address","register-password":"Password","register-confirm-password":"Password Confirmation","valid-email-alert":"Please enter a valid email address.","first-name-alert":"Please enter your first name.","last-name-alert":"Please enter your last name.","password-length-alert":"Please enter a password that is at least six characters long and matches the password confirmation.","agree-terms-alert":"Please agree to the terms & conditions.","drag-image-or-click":"Drag image or click","profile-bio":"A little info about yourself","profile-save":"Save Profile","profile-cancel":"Cancel","account-update-success":"Your account has been successfully updated.","account-change-email":"Change Email Address","account-signed-in-as":"You are signed in as","account-current-password":"Current Password","account-new-email":"New Email","account-update-button":"Update","account-invalid-password":"The current password you provided is invalid.","account-email-exists":"A user with that email address already exists.","account-email-invalid":"The email address you provided is invalid.","account-subscription-already-canceled":"That subscription has already been canceled.","account-no-subscription":"That subscription does not exist","account-invalid-shipping":"Please ensure you filled out your shipping address properly.","account-subscription-updated":"Your subscription has been updated.","account-subscription-update-failed":"There was a problem updating your subscription. Please try again later.","account-subscription-canceled":"Your subscription has been canceled.","account-new-password":"New Password","account-confirm-password":"Confirm New Password","account-successful-password":"Your password has been changed successfully.","account-failed-cc-update":"There was a problem updating your card information, please try again.","account-invalid-stripe-token":"The token you have provided is invalid or has expired.","account-invalid-url":"Invalid URL, please sign in and try again.","account-invalid-details":"Please make sure you've properly filled out all of your details below.","return-home":"Return Home","course-detail-share-this":"Share This","ask-modal-subject-line":"Subject Line","ask-modal-message":"Message","quiz-choice-true":"True","quiz-choice-false":"False","webinar.date-message":"This {{contentType}} meets on the following dates:","webinar.join-now":"Join Now","student-dashboard.back":"back","student-dashboard.leaderboard":"Leaderboard","student-dashboard.badges":"Credly Badges","in-person-event.meta-title":"{{eventTitle}} - {{companyName}}","in-person-event.date-label":"Date:","in-person-event.calendar":"","article-video.email-body":"Check out {{title}} on {{companyName}}: {{url}}","article-video.email-subject":"{{companyName}}: {{title}}","cookies.statement":"We use necessary cookies to make our site work. By clicking 'accept', you agree that we may also set optional analytics and third party behavioral advertising cookies to help us improve our site and to provide information to third parties. For more information on how these cookies work, please see our privacy policy.","cookies.cta":"Accept","cookies.more-info":"More Info","cookies.header":"Cookie Policy","cookies.decline":"Decline","recommendation.header":"Recommendation Assessment","bookmark.new-folder":"Create New Folder","bookmark.my-bookmarks":"My Bookmarks","bookmark.save":"Save Bookmark","bookmark.update":"Update Bookmark","bookmark.remove":"Remove Bookmark","bookmark.note":"Note","bookmark.folder":"Folder","bookmark.folderName":"Folder Name","bookmark.view":"View","bookmark.cancel":"Cancel","bookmark.edit":"Edit","bookmark.delete-folder-confirmation":"This action cannot be undone and all bookmarks in this folder will be deleted.","bookmark.delete-confirmation":"Are you sure?","invoice-me":"Invoice Me","access-expires":"Access expires","balance.unit.one":"Credit","balance.unit.other":"Credits","balance.current":"Current Balance: {{count}}","balance.redeem":"Redeem","balance.confirm.one":"Are you sure? {{count}} credit will be deducted immediately.","balance.confirm.other":"Are you sure? {{count}} credits will be deducted immediately.","recommendation.retake":"Retake Assessment","recommendation.no-content":"No recommended content","recommendation.no-question":"No recommendation questions","recommendation.save":"Save & Continue","ref1":"Learner Reference 1","ref2":"Learner Reference 2","ref3":"Learner Reference 3","ref4":"Okta ID ","ref5":"Learner Reference 5","ref6":"Learner Reference 6","ref7":"Learner Reference 7","ref8":"Company","ref9":"Country","ref10":"Relationship Type ","next-page":"Next","prev-page":"Previous","search.no-results":"Nothing found matching your query, please try again.","search.results-title":"Search Results","send":"Send","select-recipient":"Select Recipient","send-to-myself":"Send to Myself","send-to-a-friend":"Send to a Friend","input-email":"Input Email","add-a-note":"Add a Note","email-sent":"Email Sent","send-another-email":"Send Another Email","select-language":"SELECT LANGUAGE","updated":"Updated","archive.archive":"<font style=\"color:#FFFFFF\">Archive</font>","archive.reinstate":"Reinstate","archive.continue":"<font style=\"color:#FFFFFF\">Continue<font style=\"color:#FFFFFF\"></font></font>","archive.cancel":"Cancel","panorama-dashboard.welcome-header":"Welcome","panorama-dashboard.welcome-subtitle":"It's great to see you!","panorama-dashboard.welcome-body":"View the list below to set up and manage your learning experience.","panorama-dashboard.todo-description":"Get started with some tasks here:","panorama-dashboard.support-header":"","panorama-dashboard.support-body":"","panorama-dashboard.support-cta-copy":"","panorama-dashboard.support-cta-link":"","archive":"Archive","reinstate":"Reinstate","continue":"Continue","download":"Download","download-codes":"Download Codes","item-type":"Item Type","access-expiration":"Access Expiration","seats":"Seats Purchased","item":"Item","transaction-type":"Transaction Type","transaction-date":"Transaction Date","charge":"Charge","no-purchases":"No purchases found.","content":"Content","content-type":"Content Type","archive-date":"Archive Date","filter-transactions-by":"Filter transactions by","single-subscription":"Single Subscriptions","single-non-recurring":"Single Non-Recurring","bulk-non-recurring":"Bulk Non-Recurring","bulk-subscription":"Bulk Subscription","one-time-transaction":"One-Time Transaction","full-refund":"Full Refund","partial-refund":"Partial Refund","acting-as-a-learner":"You are currently acting as a learner.","currently-a-learner":"You are currently a learner.","return-to-management":"Return to Management","charge-for-subscription":"Charge For Subscription","competency.retake-button":"Retake Assessment","competency.header":"Competency Assessment","competency.continue-to-learning-path":"Continue","competency.no-content":"Based on your results you have not been assigned any content. Please continue with the Learning Path","competency.assessment-results-title":"Assessment Results","competency.results-questions-correct":"You got {{correct}} out of {{total}} correct","competency.results-passed":"You passed!","competency.results-failed":"You did not pass.","competency.results-total-questions":"Total","competency.results-answered-questions":"Answered","competency.results-correct-questions":"Correct","competency.results-incorrect-questions":"Incorrect","competency.passing-grade":"{{grade}}% required for passing grade","competency.save":"Save & Continue","competency.require-assessment":"Required Assessment","competency.view-results":"View Results","competency.no-content-assigned":"No Content Assigned","competency.thank-you-for-submission":"Thanks for your submission","no":"No","yes":"Yes","show":"Show","opens":"Opens","add-a-choice":"Add a choice","fill-in-answer":"Fill in your answer.","enter-submission-text":"Enter submission text","progress-with-percent":"Progress","progress-without-percent":"Progress","open-now":"Open Now","note.view-page":"View page in course","linked-workbook.sort-title":"Title","linked-workbook.most-recent":"Most Recent","linked-workbook.sort-relevance":"Relevance","linked-workbook.display-type-grid":"Grid","linked-workbook.display-type-list":"List","linked-workbook.search-placeholder":"Search workbooks","linked-workbook.add-new-collection":"Add New Collection","linked-workbook.collection-setting":"Collection Setting","linked-workbook.remove-from-collection":"Remove from Collection","linked-workbook.delete-workbook":"Delete Workbook","linked-workbook.view-all-workbooks":"View All Workbooks","linked-workbook.select":"Select","linked-workbook.collection-name":"Collection Name","linked-workbook.create":"Create","linked-workbook.save":"Save","linked-workbook.destroy-category-confirmation":"Are you sure you want to delete this collection?","linked-workbook.destroy-confirmation":"Are you sure you want to delete this workbook?","linked-workbook.all-workbooks":"All Workbooks","linked-workbook.no-workbooks":"Nothing here yet, get by completing a workbook","linked-workbook.collections":"Collections","linked-workbook.collection":"Collection","linked-workbook.build-date":"Build Date","linked-workbook.category-deleted":"Category deleted","thread-instance-of.one":" Instance of","thread-instance-of.other":" Instances of","scorm.close-embedded":"You may move to the next page.","scorm.close-popup":"This content has ended. You may close this window.","scorm.standalone-close-embedded":"This content has ended. You may exit.","scorm.close-asset":"This content has ended. You may close this asset.","join-waitlist":"Join Waitlist","unenroll-waitlist":"Unenroll Waitlist","additional-credit-balance-contact-admin":"Please contact your account administrator for additional credits if needed.","available-credits":"Your Available Credits","learner-credit-balance":"Current Balance","save-new-card-future-payment":"Your new card will be automatically used for any future payments including subscriptions or recurring charges.","edit-card":"Edit Card","certificate.meta-title":"Certification for {{title}} - {{companyName}}","certificate.meta-description":"","certificate.issued-to":"Issued To","certificate.company":"Organization","certificate.issued-date":"Issue Date","certificate.expiration-date":"Expiration Date","certificate.identifier":"Certification ID","certificate.add-to-profile":"Add to profile","verify-email.please-confirm":"Please Confirm Your Account","verify-email.confirmation-text":"Thank you for your order! An email has been sent with instructions to validate your email address. After you confirm your account, you will be able to sign in and access your learning.","verify-email.statement":"Thank you for your registration! An email has been sent with instructions to validate your email address. After you confirm your account, you will be able to sign in and access your learning.","verify-email.not-validated":"Account Not Validated","verify-email.not-validated-statement":"This account requires validation via email confirmation. An email has been sent to you with instructions to validate your email address. After you cofirm your account, you will be able to sign in and access your learning.","account-menu.my-account":"My Account","credits":"credits","dashboard.personal-credit-account":"My Personal Credit Account","dashboard.credit-account-redeem-content":"Your Credit Account(s) hold credits that were given directly from account administers, which can be used to redeem content that have a credit price.","choose-credit-account-to-redeem":"Please choose a Credit Account to redeem from.","redeem-with-credits":"Or, redeem with credits","redeem-with-credits.credits-only":"Redeem with credits","choose-credit-account":"Choose Credit Account","tax-details-message":"","choice-input-button-save":"Save","choice-input-placeholder":"Your Choice","pagination-info":"Showing {{nowShowing}} of {{total}} items","dashboard.details-page-link":"View Details","gift-recipient-first-name-label":"Gift Recipient First Name","gift-recipient-last-name-label":"Gift Recipient Last Name","gift-recipient-email-label":"Gift Recipient Email Address","gift-delivery-date-label":"Gift Delivery Date","gift-message-label":"Gift Message ","limit-200-characters-label":"(limit 200 characters)","star-rating":"Rated {{stars}} out of 5 stars","rate-stars":"Rate {{stars}} out of 5 stars","not-rated-yet":"not rated yet","course.no-available-seats-no-waitlist":"There are no available seats for the course {{course}}.","course.no-available-seats-join-waitlist":"There are no available seats for the course {{course}}. You have been enrolled in the waitlist.","course.exceeded-max-seats":"This action will consume {{count}} too many seats for the course {{course}}. Please reduce the number of seats or contact your manager.","learning-path.due":"Due:","learning-path.due-date":"Due Date:","learning-path.due-date-late":"(Overdue)","thread.enter.comment":"Enter your comment here"};
+
+  window.CONF = {
+    commit: 'e33e28219c2bf7a8abac541e710ff716235800ea',
+    region: 'us-east-1',
+      regionIsUS: true,
+      regionIsEU: false,
+    rusticiRegistrationCheckerEndpoint: 'https://s6vmvkx8wk.execute-api.us-east-1.amazonaws.com/latest/',
+    cloudinaryUploadEndpoint: 'https://api.cloudinary.com/v1_1/thoughtindustries/image/upload',
+    cloudinaryName: 'thoughtindustries',
+    cloudinaryFilePreviewsFolder: 'filepreviews',
+    cloudinaryCourseUploadsFolder: 'course-uploads',
+    cloudinaryMigratedDataFolder: 'migrated',
+    pdfAPIEndpoint: 'https://nuzex26r3a.execute-api.us-east-1.amazonaws.com/latest/view-v1',
+    tiAssignmentSubmissionsBucket: 'ti-assignment-submissions-east',
+    tiAudioUploadsBucket: 'ti-audio-uploads',
+    tiCourseUploadsBucket: 'ti-course-uploads',
+    tiQuizQuestionsBucket: 'ti-quiz-questions',
+    tiRedemptionImportUploadsBucket: 'ti-redemption-import-uploads',
+    tiStudentUploadsBucket: 'ti-student-uploads',
+    tiPDFUploadsBucket: 'ti-pdf-uploads',
+    tiPowerpointUploadsBucket: 'ti-powerpoint-uploads',
+    tiScormUploadsBucket: 'ti-scorm-uploads',
+    tiUserImportUploadsBucket: 'ti-user-import-uploads',
+    domain: 'thoughtindustries.com',
+    rssStatusUrl: 'https://v6viklp128.execute-api.us-east-1.amazonaws.com/latest',
+    requestId: '7b617dad-6766-4308-b594-172fc8f20c3f',
+    cloudfrontHost: 'd36ai2hkxl16us.cloudfront.net',
+    cloudFrontSCORMHost: 'd37ethnb9ab8fd.cloudfront.net',
+    analyticsEndpointUrl: 'https://qisfh7zwi8.execute-api.us-east-1.amazonaws.com/latest',
+    isMobile: /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile/.test(navigator.userAgent),
+    authToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoVG9rZW4iOiJrYjV2eGxtbmd4bW81cm5ycDhwYmRqOTN1YnU0bnp1IiwiaWF0IjoxNzAxODQwNjIwLCJleHAiOjE3MzM0NjMwMTl9.KceQ6IohS2pH-sa8-yyzGwMYwkp0oIphciqyiwDeKiM',
+    nonce: 'mh6io3peun4lfj3w3904053v',
+    cspNonce: 'wc56uxsd10v7zlobzhcutx58',
+    ziggeoAppToken: '6edac779d2b6e90c7f4d93f2a22910fe',
+      currencySymbol: '$',
+      session: {
+        initialLoad: true,
+        timeout: 31622392,
+        date: 1733463019
+      },
+      heliumTransitions: ["/dashboard"],
+    assetPath: 'https://d36ai2hkxl16us.cloudfront.net/v3/dist/',
+    preload: {
+      company: {"id":"ae62dcd7-abdc-4e90-a570-83eccba49043","name":"MongoDB","copyrightName":"MongoDB","features":["ecommerce","competencyAssessments","adobeConnect","surveyGizmo","tax","clientSubscription","postgresSync","bulkPurchasing","communities","externalActivity","gamification","embedWidget","singleInstanceLocalization","campaigns","clientCustomDomain","recommendationEngine","removePoweredBy","scormExport","saml2","salesforce","scormRustici","cas","openIdConnect","sso","video_recording","xApiRustici","zapier","bookmarking","centralLibrary","clientReporting","archiving","domain","panoramaContentCreation","licenseRefs","clientViewRoles","client","panoramaReportingHub","advancedClients","panoramaUpgrade","recommendation","secondaryCourseNav","contentSearch","contentCatalogSearch","zoom","goToTraining","goToWebinar","webex","panoramaExposedHomepage","appcuesLaunchpad","alwaysRegenerateCertificates","credly","transcriptPastCompletions","helium","licenseSeparation","zoomLogging","externalConditionalRedirect"],"appearanceBlock":"c7df8d1d-1add-4628-a7d9-6100285a1229","appearanceHash":"15eef2f2e1","catalogBlock":"a90c1482-0804-45f2-9a2a-f533fa9223c0","micrositeHeaderBlock":"c5587895-f74e-4a89-9992-51c30746d396","micrositeFooterBlock":"9a849676-e529-46a9-bc39-fd22bfa632c4","micrositeFeaturedCoursesBlock":"1d8a1091-e357-4ece-9fa0-0dfc8b019bfc","trackingEventsBlock":"8ddfba50-1bf0-402c-b05e-55b44a6c0b24","supportSidebarBlock":"e768b9bb-0e4c-4c57-bde9-956ddcd891ae","emailLayoutBlock":"c63da744-9986-4eb9-847b-669b02ce97ec","subdomainWithHost":"learn.mongodb.com","timeZone":"America/New_York","dfpId":null,"ssoBlock":"61c81b3a-3c98-4704-a970-7c01f4debca4","learnerNavOpenOnLoad":true,"needAddress":false,"externalTermsUrl":null,"homepageRedirectUrl":null,"discussionRulesBlock":null,"awardTypesBlock":"eda75e32-cb6c-48f6-aa35-b8ed7ce6bdd8","topicGroup":"566c3642-bfe2-4110-bc23-d48654eb831c","skipCourseDetailWhenAvailable":false,"subdomain":"mongodbedusandbox","open":true,"customHost":"learn.mongodb.com","primaryBundle":null,"lang":"en","schoolName":"learn.MongoDB.com","requestedFeatures":[],"cookiePopupEnabled":false,"autoTimeZoneEnabled":true,"enableExternalCertificateUploads":false,"enableCertificateSharing":true,"linkedInOrganizationName":"MongoDB","linkedInOrganizationId":783611,"claimCreditsUrl":null,"languageSelectorEnabled":false,"languages":["en","fr","es","zh","pt","de","ja"],"languageSelectorDisplay":"dark","autoFilterForSelectedLanguage":false,"defaultLanguage":null,"displayInlineNotes":true,"enableContentArchiving":false,"enableAddToQueue":false,"disableAutomaticNonessentialCookies":false,"externalCookiePolicyUrl":null,"cookiePolicyText":null,"dashboardReportType":null,"dashboardReport":null,"requireEmailVerification":false,"displayNewsletterSignupAtRegistration":false,"atomsStyleUrl":null,"atomsScriptUrl":null,"disabledEmails":null,"blockedCountriesForNewsletterSignup":[]},
+      currentUser: {"roles":[{"id":"213f4297-bc5a-425e-bcee-720d1dd56959","company":"ae62dcd7-abdc-4e90-a570-83eccba49043","hasAccessToAllCourses":false,"hasManagerInterfaceAccess":false,"keyName":"student","kind":null,"name":"Student","passwordLength":6,"passwordNumbers":0,"passwordSymbols":0,"passwordUppercases":0,"resetPasswordCount":5,"resetPasswordUnit":"year","timeoutCount":1,"timeoutUnit":"year","permissions":{},"createdAt":"2022-03-31T15:08:00.706Z","updatedAt":"2022-03-31T15:08:00.706Z","importId":null,"weight":null,"reportAccess":null}],"clients":[],"allocatedLicenses":[],"currentUser":{"role":"213f4297-bc5a-425e-bcee-720d1dd56959","allocatedLicenses":[],"id":"d3263d2e-df40-4b7f-ab57-fbd8e296b29d","email":"teamichelle13@gmail.com","externalCustomerId":"00um46diqq0z88b2f297","shippingName":null,"address1":null,"address2":null,"city":null,"state":null,"zipCode":null,"telephone":null,"country":null,"firstName":"Tea","lastName":"Larson-Hetrick","profileBlock":null,"lang":null,"asset":null,"ref1":null,"ref2":null,"ref3":null,"ref4":"00um46diqq0z88b2F297","ref5":null,"ref6":null,"ref7":null,"ref8":null,"ref9":null,"ref10":null,"client":null,"adminClients":null,"activeLicense":null,"actingAsStudent":false,"balance":null,"updateCardToken":null,"learnerUserId":null,"managerUserId":null,"isSuperAdmin":false}}
+    }
+  };
+
+</script>
+
+    <script type="text/javascript" src="https://d36ai2hkxl16us.cloudfront.net/v3/dist/4489-9965b6e4d01ef82010db.bundle.js"></script>
+    <script type="text/javascript" src="https://d36ai2hkxl16us.cloudfront.net/v3/dist/1198-95d5258a5c7f3138dcdb.bundle.js"></script>
+    <script type="text/javascript" src="https://d36ai2hkxl16us.cloudfront.net/v3/dist/2826-270bc2442de64395d05f.bundle.js"></script>
+    <script type="text/javascript" src="https://d36ai2hkxl16us.cloudfront.net/v3/dist/app-3910d54300479b2b6bff.bundle.js"></script>
+
+
+
+<script nonce="wc56uxsd10v7zlobzhcutx58" type="text/javascript">
+  window.TiEmbedSettings = {
+    embed: 'https://academy.thoughtindustries.com/embed/embed',
+    jwt: function () {
+      return ic.ajax
+        .request({
+          method: 'post',
+          url: '/learn/knowledgeCenterJWT'
+        });
+    }
+  };
+</script>
+<script type="text/javascript" src="https://d36ai2hkxl16us.cloudfront.net/ti-embed-widget/v2/dist/ti-embed.production.umd.js"></script>
+
+
+<!-- <script>
+  const createMyDashboardButton = function () {
+    var myDashboardA = document.createElement('a');
+
+    // Set attributes to html element a
+    myDashboardA.href = '/learn/dashboard';
+    myDashboardA.id = 'btn-header-dashboard-mongodb';
+    myDashboardA.className = 'css-vtowg7-Desktop capitalize hidden';
+    myDashboardA.innerHTML =
+      "<div class='css-x8e72n-LinkContent'><span class='textlink-text-class css-k5phjm-Text'>My Dashboard</span></div>";
+
+    return myDashboardA;
+  };
+
+  const createMyDashboardMobileButton = function() {
+    let myDashboardMobileDiv = document.createElement("div");
+
+    // Set attributes to html element div
+    myDashboardMobileDiv.id = "mobile-dashboard-mongodb";
+    myDashboardMobileDiv.className = "css-mobile-logged hidden";
+    myDashboardMobileDiv.innerHTML = "<a data-track='true' href='/learn/dashboard' class='css-on7z6o' tabindex='0'>My Dashboard</a>";
+
+    return myDashboardMobileDiv;
+  }
+  
+  const createManagerAccessButton = function() {
+    let myManageAccessButton = document.createElement("div");
+
+    // Set attributes to html element div
+    myManageAccessButton.className = "css-b2ozjl-Button";
+    myManageAccessButton.innerHTML = "<a id='btn-header-manager-mongodb' class='css-dm2njm-Button hidden' href='/learn/manager/'>Manager Access</a>";
+
+    return myManageAccessButton;
+  };
+
+  const createManagerAccessMobileDiv = function() {
+    let myManagerAccessMobileDiv = document.createElement("div");
+
+    // Set attributes to html element div
+    myManagerAccessMobileDiv.id = "mobile-manager-access-mongodb";
+    myManagerAccessMobileDiv.className = "css-mobile-logged hidden";
+    myManagerAccessMobileDiv.innerHTML = "<a data-track='true' href='/learn/manager' class='css-l8mc52' tabindex='0'>Manager Access</a>";
+
+    return myManagerAccessMobileDiv;
+
+  }
+</script> -->
+
+<!-- https://jira.mongodb.org/browse/UP-6088 -->
+<script type="text/javascript">
+  if (window.location.href.includes("https://learn.mongodb.com/learn/accept_invite")) {
+    window.location.href = "https://account.mongodb.com/account/register?fromURI=https%3A%2F%2Flearn.mongodb.com%2Faccess%2Fsaml%2Flogin";
+  }
+</script>
+
+<script
+  type="text/javascript"
+  src="https://d36ai2hkxl16us.cloudfront.net/highlight.pack.js"
+></script>
+<script type="text/javascript">
+  function waitForCode() {
+    var matches = $('code').not('.hljs');
+    if (matches.length >= 1) {
+      matches.each(function (i, match) {
+        if ($(match).parents('.redactor-box').length === 0) {
+          hljs.highlightBlock(match);
+        }
+      });
+    }
+    setTimeout(waitForCode, 200);
+  }
+
+  waitForCode();
+</script>
+
+<!-- <script>
+  // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+  function makeHeaderSticky() {
+    var header = document.getElementById('bottom-navigation');
+    var sticky = header && header.offsetTop;
+
+    if (sticky === null || sticky === undefined) {
+      return;
+    }
+
+    if (window.pageYOffset > sticky) {
+      header.classList.add('sticky');
+    } else {
+      header.classList.remove('sticky');
+    }
+  }
+
+  window.addEventListener('scroll', function () {
+    makeHeaderSticky();
+  });
+</script> -->
+
+<script>
+  function menuToggler() {
+    var menuTogglerButton = document.getElementById('menu-toggler');
+    var sideMenu = document.getElementById('drawer-menu');
+    var openButtonIcon = document.getElementById('hamburger-icon');
+    var closeButtonIcon = document.getElementById('close-icon');
+
+    var myinterval = setInterval(function () {
+      if ((menuTogglerButton && sideMenu && openButtonIcon, closeButtonIcon)) {
+        menuTogglerButton.addEventListener('click', function () {
+          sideMenu.classList.toggle('open');
+          openButtonIcon.classList.toggle('hidden');
+          closeButtonIcon.classList.toggle('hidden');
+          document.body.classList.toggle('overlay');
+        });
+
+        clearInterval(myinterval);
+      } else {
+        menuTogglerButton = document.getElementById('menu-toggler');
+        sideMenu = document.getElementById('drawer-menu');
+        openButtonIcon = document.getElementById('hamburger-icon');
+        closeButtonIcon = document.getElementById('close-icon');
+      }
+    }, 100);
+  }
+
+  window.addEventListener('locationchange', menuToggler);
+</script>
+
+<script>
+  // wait until everything is loaded before calling the addRating method
+  window.addEventListener('load', function () {
+    if (window.addRating !== undefined) {
+
+      window.addRating();
+    }
+  });
+</script>
+
+<script>
+  function expanderListener() {
+    var expandButtons = document.getElementsByClassName('css-5pff4e');
+    function expandBtnOnClick(el) {
+      var firstContainerSiblings = el.closest('li').children;
+      var toBeExpandedContainer;
+
+      for (var j = 0; j < firstContainerSiblings.length; j++) {
+        if (firstContainerSiblings[j].localName === 'ul') {
+          toBeExpandedContainer = firstContainerSiblings[j];
+          break;
+        }
+      }
+
+      if (toBeExpandedContainer) {
+        var toBeExpandedItems = toBeExpandedContainer.children;
+
+        for (var k = 0; k < toBeExpandedItems.length; k++) {
+          if (toBeExpandedItems[k].localName === 'li') {
+            toBeExpandedItems[k].classList.toggle('open');
+          }
+        }
+      }
+    }
+    var expansionInterval = setInterval(function () {
+      if (expandButtons.length > 0) {
+        for (var i = 0; i < expandButtons.length; i++) {
+          var btn = expandButtons[i];
+          btn.addEventListener('click', expandBtnOnClick.bind(undefined, btn));
+        }
+        clearInterval(expansionInterval);
+      } else {
+        expandButtons = document.getElementsByClassName('css-5pff4e');
+      }
+    });
+  }
+
+  window.addEventListener('locationchange', expanderListener);
+</script>
+
+<!--EXAMITY redirect; function called from button in all examity certification courses -->
+<script>
+  $('body').on('click', '.examity-redirect', function () {
+    examityRedirect();
+  });
+
+  const examityRedirect = function () {
+    var settings = {
+      url: '/learn/workatoProxy',
+      method: 'POST',
+      timeout: 0,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
+      success: function (response) {
+        const url = response.data.url.replace(/['"]+/g, '');
+        if (!response.errors) {
+          window.open(url, '_blank');
+        }
+      },
+      error: function (e) {
+        console.log(e);
+      },
+      data: JSON.stringify({
+        payload: {
+          payloadBody: {
+            email: window.CONF.preload.currentUser.currentUser.email
+          }
+        },
+        urlSlug: '/examity/examity-redirect'
+      })
+    };
+
+    $.ajax(settings);
+  };
+</script>
+
+<!-- Learner Dashboard Panorama Redirect Script -->
+<script type="text/javascript">
+(function () {
+  let nInterval;
+  const newDashDestination = '/dashboard';
+  const panoramasWithUniqueDashboard = [
+    '14a135dc-fc6f-4867-8cf1-77f3acf7a403', // MongoDB Educators
+    '281372a8-5970-4a58-b07c-3737be8214ae', // Bank of America
+  ];
+
+  function check() {
+    if (!nInterval) {
+      nInterval = setInterval(redirect, 100);
+    }
+    return true;
+  }
+
+  function fetchWindowCurrentUser() {
+    if (window.CONF && window.CONF.preload && window.CONF.preload.currentUser) {
+      return window.CONF.preload.currentUser.currentUser;
+    }
+
+    return null;
+  }
+
+  function shouldRedirectToNewDashboard(id) {
+    if (!id) {
+      return false;
+    }
+
+    return !panoramasWithUniqueDashboard.includes(id);
+  }
+
+  function redirect() {
+    if (nInterval) {
+      clearInterval(nInterval);
+      nInterval = null;
+    }
+
+    const user = fetchWindowCurrentUser();
+
+    if (shouldRedirectToNewDashboard(user?.client?.id)) {
+      if (window.location.pathname === '/learn/dashboard') {
+        const overlay = document.createElement('div');
+        const img = document.createElement('img');
+
+        img.src = 'https://cdn-ti.learn.mongodb.com/dashboard/loading.gif';
+
+        overlay.appendChild(img);
+
+        overlay.style.backgroundColor = 'white';
+        overlay.style.height = '100%';
+        overlay.style.width = '100%';
+        overlay.style.position = 'fixed';
+        overlay.style.zIndex = 2;
+        overlay.style.top = 0;
+        overlay.style.left = 0;
+        overlay.style.display = 'flex';
+        overlay.style.justifyContent = 'center';
+        overlay.style.alignItems = 'center';
+
+        const existingEl = document.getElementById('learner');
+        document.body.insertBefore(overlay, existingEl);
+
+        // do the redirect
+        window.location.href = newDashDestination;
+        return;
+      } else {
+        check();
+      }
+    } else {
+      check();
+    }
+
+    return;
+  }
+
+  document.addEventListener('click', e => {
+    const origin = e.target.closest('a');
+    if (origin && origin.href) {
+      if (origin.href.endsWith('/learn/dashboard')) {
+        const user = fetchWindowCurrentUser();
+        if (
+          shouldRedirectToNewDashboard(user?.client?.id) &&
+          user?.role &&
+          !user.role.get('hasManagerInterfaceAccess')
+        ) {
+          e.preventDefault();
+          window.location.href = newDashDestination;
+          return;
+        }
+      }
+    }
+  });
+
+  redirect();
+})();
+</script>
+
+<!-- <script>
+  function fixSideDrawerState() {
+    var leftMenuToggle = document.getElementById('unified-nav-lms');
+    var signInDiv = leftMenuToggle && leftMenuToggle.getElementsByClassName('css-1fhmhvi');
+    var signInButton =
+      leftMenuToggle && leftMenuToggle.getElementsByClassName('css-16rgrjy');
+
+    var divMobileButtons =
+      leftMenuToggle && leftMenuToggle.getElementsByClassName('css-121px1v');
+
+    var mySideDrawerInterval = setInterval(function () {
+      if (signInButton && signInButton.length > 0 && divMobileButtons && divMobileButtons.length > 0) {
+        // Update URL with correct SignIn
+        signInButton[0].href = 'https://learn.mongodb.com/access/saml/login';
+
+        let myDashboardMobileButton = document.getElementById("mobile-dashboard-mongodb");
+        if (!myDashboardMobileButton) {
+          divMobileButtons[0].appendChild(createMyDashboardMobileButton());
+          myDashboardMobileButton = document.getElementById("mobile-dashboard-mongodb");
+        }
+
+        let myManagerAccessMobileButton = document.getElementById("mobile-manager-access-mongodb");
+        if (!myManagerAccessMobileButton) {
+          divMobileButtons[0].appendChild(createManagerAccessMobileDiv());
+          myManagerAccessMobileButton = document.getElementById("mobile-manager-access-mongodb");
+        }
+
+        const isLoggedInMobile = window.CONF.preload.currentUser.currentUser.id;
+
+        if (!!isLoggedInMobile) {
+          signInDiv && signInDiv[0].classList.add('hidden');
+          myDashboardMobileButton && myDashboardMobileButton.classList.remove("hidden");
+        } else {
+          signInDiv && signInDiv[0].classList.remove('hidden');
+          myDashboardMobileButton && myDashboardMobileButton.classList.add("hidden");
+        }
+
+        if(myManagerAccessMobileButton) {
+          if (!!isLoggedInMobile && !(['student', 'guest', 'registrant', 'comp']).includes(window.CONF.preload.currentUser.roles[0].keyName)) {
+              myManagerAccessMobileButton && myManagerAccessMobileButton.classList.remove("hidden");
+          } else {
+              myManagerAccessMobileButton && myManagerAccessMobileButton.classList.add("hidden");
+          }
+        }
+
+        clearInterval(mySideDrawerInterval);
+      } else {
+        leftMenuToggle = document.getElementById('unified-nav-lms');
+        signInDiv = leftMenuToggle && leftMenuToggle.getElementsByClassName('css-1fhmhvi');
+        signInButton =
+          leftMenuToggle &&
+          leftMenuToggle.getElementsByClassName('css-16rgrjy');
+        divMobileButtons =
+          leftMenuToggle && leftMenuToggle.getElementsByClassName('css-121px1v');
+      }
+    }, 100);
+  }
+</script> -->
+
+<!-- <script>
+  function fixHeaderState() {
+    var headerNav = document.getElementById('unified-nav-lms');
+    var signInButton =
+      headerNav && headerNav.getElementsByClassName('css-1sqfavz');
+
+    var divHeaderRightButtons =
+      headerNav && headerNav.getElementsByClassName('css-1o92nkl');
+
+    var myHeaderStateInterval = setInterval(function () {
+      if (
+        signInButton &&
+        signInButton.length > 0 &&
+        divHeaderRightButtons &&
+        divHeaderRightButtons.length > 0
+      ) {
+        // Update URL with correct SignIn
+        signInButton[0].href = 'https://learn.mongodb.com/access/saml/login';
+
+        let myDashboardButton = document.getElementById("btn-header-dashboard-mongodb");
+        if (!myDashboardButton) {
+          divHeaderRightButtons[0].appendChild(createMyDashboardButton());
+          myDashboardButton = document.getElementById("btn-header-dashboard-mongodb");
+        }
+
+        let myManagerAccessButton = document.getElementById("btn-header-manager-mongodb");
+        if (!myManagerAccessButton) {
+          divHeaderRightButtons[0].appendChild(createManagerAccessButton());
+          myManagerAccessButton = document.getElementById("btn-header-manager-mongodb");
+        }
+
+        const isLoggedInDesktop = window.CONF.preload.currentUser.currentUser.id;
+
+        if (!!isLoggedInDesktop) {
+          signInButton[0].classList.add('hidden');
+
+          myDashboardButton && myDashboardButton.classList.remove("hidden");
+        } else {
+          signInButton[0].classList.remove('hidden');
+
+          myDashboardButton && myDashboardButton.classList.add("hidden");
+        }
+
+        if (myManagerAccessButton) {
+          if (!!isLoggedInDesktop && !(['student', 'guest', 'registrant', 'comp']).includes(window.CONF.preload.currentUser.roles[0].keyName)) {
+            myManagerAccessButton.classList.remove("hidden");
+          } else {
+            myManagerAccessButton.classList.add("hidden");
+          }
+        }
+
+        clearInterval(myHeaderStateInterval);
+      } else {
+        headerNav = document.getElementById('unified-nav-lms');
+        signInButton =
+          headerNav && headerNav.getElementsByClassName('css-1sqfavz');
+        divHeaderRightButtons =
+          headerNav && headerNav.getElementsByClassName('css-1o92nkl');
+      }
+    }, 100);
+  }
+</script> -->
+
+<!-- <script>
+  function removeTIElements() {
+    let staticNav = document.getElementById("consistent-nav-static-remove");
+    let staticFooter = document.getElementById("consistent-footer-static-remove");
+
+    let countNavElement = 1;
+    let countFooterElement = 1;
+
+    const clearIntervalNav = setInterval(function () {
+      if (staticNav) {
+        // Remove Nav header
+        staticNav.remove();
+
+        clearInterval(clearIntervalNav);
+      } else {
+        if (countNavElement == 30) {
+          clearInterval(clearIntervalNav);
+        }
+
+        staticNav = document.getElementById("consistent-nav-static-remove");
+        countNavElement += 1;
+      }
+    }, 100);
+
+    const clearIntervalFooter = setInterval(function () {
+      if (staticFooter) {
+        // Remove Footer
+        staticFooter.remove();
+
+        clearInterval(clearIntervalFooter);
+      } else {
+        if (countFooterElement == 30) {
+          clearInterval(clearIntervalFooter);
+        }
+
+        staticFooter = document.getElementById("consistent-footer-static-remove");
+        countFooterElement += 1;
+      }
+    }, 100);
+  }
+  
+</script> -->
+
+<!-- <script>
+  function loadMongoDBFiles() {
+    // Inject files to load with delay to prevent errors
+    setTimeout(function () {
+      // Get the head tag
+      var head_ID = document.getElementsByTagName('head')[0];
+
+      // Create script element to append the main min js
+      var script_main_min = document.createElement('script');
+      // Set the script type to JavaScript
+      script_main_min.type = 'text/javascript';
+      // External JS file
+      script_main_min.src =
+        'https://poc-nav-for-ti.s3.amazonaws.com/js/main.min-093022.js';
+      head_ID.appendChild(script_main_min);
+
+      removeTIElements();
+
+      fixHeaderState();
+      fixSideDrawerState();
+    }, 1500);
+  }
+
+  const existsTIHeadNav = function() {
+    let staticNav = document.getElementById("consistent-nav-static-remove");
+
+    let countNavElement = 1;
+
+    const clearIntervalHeaderNav = setInterval(function () {
+      if (staticNav) {
+        // We need to loadMongoDB files if exists and remove TI header nav and footer
+        loadMongoDBFiles();
+
+        clearInterval(clearIntervalHeaderNav);
+      } else {
+        if (countNavElement == 30) {
+          clearInterval(clearIntervalHeaderNav);
+        }
+
+        staticNav = document.getElementById("consistent-nav-static-remove");
+        countNavElement += 1;
+      }
+    }, 100);
+  }
+
+</script> -->
+
+<!-- <script>
+  const initializeMongoDB = function() {
+    // Check if TI header to be removed exists
+    existsTIHeadNav();
+  }
+
+  window.addEventListener('locationchange', initializeMongoDB);
+
+</script> -->
+
+<script src="https://cdn-ti.learn.mongodb.com/microsites/secondary-nav/secondary-nav.js"></script>
+<script src="https://cdn-ti.learn.mongodb.com/microsites/unified-footer/unified-footer.js"></script>
+
+
+
+</body>
+</html>
