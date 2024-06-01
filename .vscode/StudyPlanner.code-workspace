@@ -1,0 +1,53 @@
+{
+	"folders": [
+		{
+			"path": "../../../../StudyPlanner"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "\\\\HP-ENVY\\Users\\teami\\StudyPlanner"
+		}
+	],
+	"settings": {
+		"jira-plugin.workingProject": "",
+		"MicroPython.executeButton": [
+			{
+				"text": "▶",
+				"tooltip": "Run",
+				"alignment": "left",
+				"command": "extension.executeFile",
+				"priority": 3.5
+			}
+		],
+		"MicroPython.syncButton": [
+			{
+				"text": "$(sync)",
+				"tooltip": "sync",
+				"alignment": "left",
+				"command": "extension.execute",
+				"priority": 4
+			}
+		],
+		"git.verboseCommit": true,
+		"git.useCommitInputAsStashMessage": true,
+		"git.terminalGitEditor": true,
+		"git.supportCancellation": true,
+		"git.showPushSuccessNotification": true,
+		"git.requireGitUserConfig": false,
+		"git.mergeEditor": true,
+		"git.ignoredRepositories": [
+			"c:\\Users\\teami"
+		],
+		"git.followTagsWhenSync": false,
+		"git.fetchOnPull": true,
+		"git.enableSmartCommit": true,
+		"git.enableCommitSigning": true,
+		"git.branchRandomName.enable": true,
+		"git.autoStash": true,
+		"git.autofetch": "all",
+		"git.allowNoVerifyCommit": true,
+		"git.allowForcePush": true
+	}
+}
