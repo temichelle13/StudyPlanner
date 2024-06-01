@@ -1,0 +1,65 @@
+
+/* CSS reset for consistency across browsers */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Root font size for easy scaling with rem units */
+html {
+    font-size: 16px;
+}
+
+/* Typography for body content */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header styling */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Main content area and sections */
+main {
+    padding: 1rem;
+}
+
+section {
+    background-color: white;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+/* Headings within sections */
+h2 {
+    margin-bottom: 0.5rem;
+}
+
+/* Footer styling */
+footer {
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Responsive design for larger screens */
+@media (min-width: 768px) {
+    section {
+        margin: 1rem auto;
+        max-width: 80%;
+    }
+}
+

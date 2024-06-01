@@ -1,0 +1,9 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/npm-package:1": "javascript",
+    "ghcr.io/devcontainers-contrib/features/autoenv:1": "latest",
+    "ghcr.io/devcontainers-contrib/features/browserify:2": {} 
+  }
+  
+}
