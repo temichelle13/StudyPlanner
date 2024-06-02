@@ -1,6 +1,6 @@
             - name: Install and configure AppMap
   # You may pin to the exact commit or the version.
-  # uses: getappmap/install-action@e03d1221532d7024300b06ba85aef35661f59f09
+  # uses: getappmap/install-action@e9eac587c6d5361ce9c3594b2cadcc0be474965ab
   uses: getappmap/install-action@v1
   with:
     # Command working directory.
