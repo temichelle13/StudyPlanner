@@ -1,8 +1,18 @@
-
 const express = require('express');
 const router = express.Router();
 const Task = require('../models/task'); // Adjust the path as per your project structure
 const mongoose = require('mongoose');
+const rateLimit = require('express-rate-limit');
+
+// Define rate limit for all routes
+const limiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 100, // Limit each IP to 100 requests per windowMs
+    message: 'Too many requests from this IP, please try again after 15 minutes'
+});
+
+// Apply the rate limit to all routes
+router.use(limiter);
 
 // GET all tasks with pagination
 router.get('/', async (req, res) => {
