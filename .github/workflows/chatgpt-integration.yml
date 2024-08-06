@@ -4,7 +4,7 @@ name: ChatGPT GitHub Automation
 
 on:
   issues:
-    types: [opened, edited]
+    types: [opened, edited, reopened]
   project_card:
     types: [created, moved, converted]
   schedule:
@@ -29,6 +29,6 @@ jobs:
 
       - name: Run ChatGPT Automation Script
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python .github/scripts/chatgpt_automation.py
