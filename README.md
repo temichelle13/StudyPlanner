@@ -1,25 +1,22 @@
 # StudyPlanner
 
-A brief description of your project, its purpose, and functionality.
+A brief description of your project, its purpose, and functionality. This study planner is designed to help users stay organized with their studies, tasks, and learning objectives.
 
-## Features
+Features include:
 
 - List of features
-- Key functionalities of your application
+- Key functionalities of the application
+- Automated task schedules based on user behaviors
+- Advanced reporting and analytics to track study progress
+- Integration with personal advice through IA
 
-## Getting Started
+Installation Guidelines:
 
-### Prerequisites
-
-- Node.js
-- MongoDB
-- Any other dependencies
-
-### Installation
-
-Provide step-by-step instructions on setting up the project locally.
+- Step-by-step guides on how to install, setup and use the project locally.
+- Prerequisites like Node.js, MongoDB and other dependencies
 
 ```bash
 git clone https://github.com/yourusername/StudyPlanner.git
 cd StudyPlanner
-npm install
+nmp install
+```

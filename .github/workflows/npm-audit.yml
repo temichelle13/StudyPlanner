@@ -1,0 +1,23 @@
+name: NPM Audit Workflowhttps://github.com/temichelle13/StudyPlanner/tree/master/.github/workflows
+
+on:
+  push:
+    paths:
+      - '**/package-lock.json'
+      - '**/package.json'
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code for audit
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run NPM Audit
+        run: npm audit --audit-level=high
