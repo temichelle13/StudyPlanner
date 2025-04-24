@@ -14,7 +14,8 @@ router.post('/register', async (req, res) => {
         const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
         res.status(201).send({ user, token });
     } catch (error) {
-        res.status(400).send(error);
+        console.error("Error during registration:", error);
+        res.status(400).send({ message: "An error occurred. Please try again later." });
     }
 });
 
@@ -26,7 +27,8 @@ router.post('/login', async (req, res) => {
         const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
         res.send({ user, token });
     } catch (error) {
-        res.status(400).send(error);
+        console.error("Error during login:", error);
+        res.status(400).send({ message: "An error occurred. Please try again later." });
     }
 });
 
