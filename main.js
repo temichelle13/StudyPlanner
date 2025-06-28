@@ -33,7 +33,7 @@ async function sanitizeTaskForm() {
     const title = document.getElementById('taskTitle').value;
     const description = document.getElementById('taskDescription').value;
     const dueDate = document.getElementById('taskDueDate').value;
-    if (!title || !description || !dete) {
+    if (!title || !description || !dueDate) {
         console.error('Invalid form data: title, description or due date is missing.');
         return null;
     }
