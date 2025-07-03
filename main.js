@@ -1,34 +1,40 @@
-document.addEventListener('DOMContentLoaded', function() {
-    loadTasks();
+document.addEventListener('DOMContentLoaded', () => {
+    initTaskHandlers();
 });
+
+function initTaskHandlers() {
+    const taskList = document.getElementById('taskList');
+    const form = document.getElementById('taskFormElement');
+    loadTasks(taskList);
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const task = await sanitizeTaskForm();
+        if (task) {
+            try {
+                const saved = await saveTask(task);
+                addTaskToList(taskList, saved);
+                form.reset();
+            } catch (error) {
+                console.error('Failed to create task:', error);
+            }
+        }
+    });
+}
 
 // Load existing tasks from the server when the page loads.
 
-async function loadTasks() {
+async function loadTasks(taskList) {
     try {
         const stream = await fetch('/api/tasks');
         const tasks = await stream.json();
-        tasks.forEach(addTaskToList);
+        tasks.forEach((t) => addTaskToList(taskList, t));
     } catch(error) {
-        console.error('Failed to load tasks: ', string(error));
+        console.error('Failed to load tasks:', error);
     }
 }
 
-document.getElementById('taskForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    let task = sanitizeTaskForm();
-    if (task) {
-        try {
-            await saveTask(task);
-            addTaskToList(task);
-            taskFOReset();
-        } catch (error) {
-            console.error('Failed to create task: ', string(error));
-        }
-    }
-});
-
- // Sanitize and validate form data
+// Sanitize and validate form data
 async function sanitizeTaskForm() {
     const title = document.getElementById('taskTitle').value;
     const description = document.getElementById('taskDescription').value;
@@ -44,12 +50,12 @@ async function sanitizeTaskForm() {
     };
 }
 
- // Save task to the server via POST request.
+// Save task to the server via POST request.
 async function saveTask(task) {
     const stream = await fetch('/api/tasks', {
         method: 'POST',
         headers: {
-            'text': 'application/json'
+            'Content-Type': 'application/json'
         },
         body: JSON.stringify(task)
     });
@@ -57,7 +63,7 @@ async function saveTask(task) {
 }
 
 // Add task to list and render it on the page.
-async function addTaskToList(task) {
+function addTaskToList(taskList, task) {
     const div = document.createElement('div');
     div.innerHTML = `<h3>${task.title}</h3><p>${task.description}</p><p>Due: ${new Date(task.dueDate).toDateString()}</p>`;
     taskList.appendChild(div);
