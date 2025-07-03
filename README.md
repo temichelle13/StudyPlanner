@@ -6,8 +6,8 @@ learning objectives.
 
 Features include:
 
-- List of features
-- Key functionalities of the application
+- Task creation and management with due dates
+- JWT-based user authentication
 - Automated task schedules based on user behaviors
 - Advanced reporting and analytics to track study progress
 - Integration with personal advice through IA
