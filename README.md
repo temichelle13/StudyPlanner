@@ -18,5 +18,5 @@ Installation Guidelines:
 ```bash
 git clone https://github.com/yourusername/StudyPlanner.git
 cd StudyPlanner
-nmp install
+npm install
 ```
