@@ -1,22 +1,32 @@
 # StudyPlanner
 
-A brief description of your project, its purpose, and functionality. This study planner is designed to help users stay organized with their studies, tasks, and learning objectives.
+StudyPlanner is a simple web application that helps you organize your study
+tasks and view them in a daily schedule. The client fetches tasks from a REST
+API and renders them on the page so you can keep track of what needs to be
+done.
 
-Features include:
+## Features
 
-- List of features
-- Key functionalities of the application
-- Automated task schedules based on user behaviors
-- Advanced reporting and analytics to track study progress
-- Integration with personal advice through IA
+- Add new study tasks using the form on the home page
+- Display tasks fetched from `/api/tasks` in a dynamic list
+- View a basic schedule section for planning your day
+- Track progress as you complete items
 
-Installation Guidelines:
+## Installation
 
-- Step-by-step guides on how to install, setup and use the project locally.
-- Prerequisites like Node.js, MongoDB and other dependencies
+Prerequisites: [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/).
 
 ```bash
 git clone https://github.com/yourusername/StudyPlanner.git
 cd StudyPlanner
-nmp install
+npm install
 ```
+
+## Usage
+
+```bash
+npm start
+```
+
+Then open [http://localhost:3000](http://localhost:3000) in your browser to use
+the planner.
