@@ -5,6 +5,7 @@ module.exports = {
     coverageDirectory: 'coverage',
     testPathIgnorePatterns: ['/node_modules/'],
     coveragePathIgnorePatterns: ['/node_modules/', '/tests/'],
+    roots: ['<rootDir>', '<rootDir>/test'],
     coverageThreshold: {
       global: {
         branches: 70,
@@ -13,5 +14,4 @@ module.exports = {
         statements: 80
       }
     }
-  };
-  
+};

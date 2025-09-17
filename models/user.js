@@ -37,6 +37,19 @@ userSchema.pre('save', async function(next) {
     next();
 });
 
+// Find a user by email and validate the password
+userSchema.statics.findByCredentials = async function(email, password) {
+    const user = await this.findOne({ email });
+    if (!user) {
+        throw new Error('Invalid login credentials');
+    }
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (!isMatch) {
+        throw new Error('Invalid login credentials');
+    }
+    return user;
+};
+
 // NOTE: Implement rate limiting or account lockout strategies for enhanced security
 // Consider using middleware or a library for this purpose
 

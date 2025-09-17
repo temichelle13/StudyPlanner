@@ -49,7 +49,26 @@
     The uncommented function below is just a placeholder and will result in failure.
   */
 
-  exports = ({ token, tokenId, username, password }) => {
-    // will not reset the password
+exports = async ({ token, tokenId, username, password }) => {
+  const serviceName = 'mongodb-atlas';
+  const dbName = 'myDatabase';
+  const users = context.services.get(serviceName).db(dbName).collection('users');
+
+  try {
+    const user = await users.findOne({ username, resetToken: token, resetTokenId: tokenId });
+    if (!user) {
+      return { status: 'fail' };
+    }
+
+    const bcrypt = require('bcryptjs');
+    const hashed = await bcrypt.hash(password, 8);
+    await users.updateOne(
+      { _id: user._id },
+      { $set: { password: hashed }, $unset: { resetToken: '', resetTokenId: '' } }
+    );
+    return { status: 'success' };
+  } catch (err) {
+    console.error('Error in resetFunc:', err);
     return { status: 'fail' };
-  };
+  }
+};
