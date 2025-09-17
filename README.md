@@ -1,84 +1,211 @@
 # StudyPlanner
 
-A brief description of your project, its purpose, and functionality. This study planner is designed to help users stay organized with their studies, tasks, and learning objectives.
+An AI-assisted study planner web application designed to help students organize their studies, manage tasks, and track their learning progress effectively. Built with Node.js, Express, MongoDB, and modern web technologies.
 
-Features include:
+## ✨ Features
 
-- List of features
-- Key functionalities of the application
-- Automated task schedules based on user behaviors
-- Advanced reporting and analytics to track study progress
-- Integration with personal advice through IA
+### Current Features ✅
+- **User Authentication**: Secure JWT-based registration and login system
+- **Task Management**: Create, read, update, and delete study tasks
+- **Due Date Tracking**: Task scheduling with due date validation
+- **Priority Levels**: Organize tasks by Low, Medium, and High priority
+- **Task Completion**: Mark tasks as completed and track progress
+- **Responsive Design**: Works on desktop and mobile devices
+- **Input Validation**: Comprehensive form validation and sanitization
+- **Security**: Rate limiting, input sanitization, and secure headers
 
-Installation Guidelines:
+### Planned Features 📋
+- **AI-Powered Recommendations**: Intelligent task prioritization and study suggestions
+- **Smart Scheduling**: Automated study schedule generation
+- **Progress Analytics**: Study habit analysis and performance tracking
+- **Calendar Integration**: Sync with external calendar applications
+- **Achievement System**: Gamification with goals and rewards
+- **Study Session Tracking**: Time tracking and productivity insights
 
-- Step-by-step guides on how to install, setup and use the project locally.
-- Prerequisites like Node.js, MongoDB and other dependencies
+## 🚀 Quick Start
 
+### Prerequisites
+- Node.js (v14 or higher)
+- MongoDB (local installation or MongoDB Atlas)
+- npm or yarn package manager
+
+### Installation
+
+1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/StudyPlanner.git
+git clone https://github.com/temichelle13/StudyPlanner.git
 cd StudyPlanner
+```
+
+2. **Install dependencies**
+```bash
 npm install
 ```
-=======
-# StudyPlanner
 
-A brief description of your project, its purpose, and functionality. This study
-planner is designed to help users stay organized with their studies, tasks, and
-learning objectives.
-
-Features include:
-
-- Task creation and management with due dates
-- JWT-based user authentication
-- Automated task schedules based on user behaviors
-- Advanced reporting and analytics to track study progress
-- Integration with personal advice through IA
-
-Installation Guidelines:
-
-- Step-by-step guides on how to install, setup and use the project locally.
-- Prerequisites like Node.js, MongoDB and other dependencies
-
+3. **Environment Setup**
 ```bash
-git clone https://github.com/yourusername/StudyPlanner.git
-cd StudyPlanner
-nmp install
+cp .env.example .env
+# Edit .env with your configuration:
+# - MONGODB_URI=your_mongodb_connection_string
+# - JWT_SECRET=your_jwt_secret_key
+# - PORT=3000
 ```
 
-## Repository Overview
+4. **Start the application**
+```bash
+# Development mode with auto-reload
+npm run dev
 
-This project is a Node.js/Express application for an AI-assisted study planner. The `package.json` references `app.js` as the main entry point and includes common development tools such as eslint and jest. Key dependencies include Express for routing, Mongoose for MongoDB access, and JWT/bcrypt for authentication.
+# Production mode
+npm start
+```
 
-### Server Code
-- **`app.js`** configures middleware (helmet, morgan, rate limiting) and listens on a port. Note that several middleware setups still contain typos that need fixing.
-- **`db.js`** manages the MongoDB connection using Mongoose and listens for connection events.
+5. **Access the application**
+Open your browser and navigate to `http://localhost:3000`
 
-### Data Models
-- **User model** (`models/user.js`) defines fields for username, email, and hashed passwords. It hints at account security features but some helpers, such as `findByCredentials`, are missing.
-- **Task model** (`models/task.js`) stores tasks with title, description, due date validation, completion status, and priority level.
+## 🛠️ Technology Stack
 
-### API Routes
-- **User routes** (`routes/userRoutes.js`) expose `/register` and `/login` endpoints using JWT-based authentication.
-- **Task routes** (`routes/taskRoutes.js`) include rate limiting and provide a paginated task listing via `GET /` as well as task retrieval with `GET /:id`.
+### Backend
+- **Node.js**: JavaScript runtime environment
+- **Express.js**: Web application framework
+- **MongoDB**: NoSQL database with Mongoose ODM
+- **JWT**: JSON Web Tokens for authentication
+- **bcrypt**: Password hashing and security
 
-### Front-End
-Static files (`index.html`, `style.css`, and `main.js`) offer a simple interface that fetches and adds tasks. The HTML page still contains unresolved merge conflict markers around a script tag.
+### Frontend
+- **HTML5**: Semantic markup structure
+- **CSS3**: Modern styling with responsive design
+- **JavaScript**: Dynamic functionality and API communication
+- **Fetch API**: HTTP client for backend communication
 
-### Additional Files
-- MongoDB Realm configs reside in directories like `data_sources/mongodb-atlas/` and `sync/`.
-- `chatgpt_automation.py` shows OpenAI and GitHub automation for issue and project management.
-- Environment templates in `environments/*.json` contain placeholders for configuration values.
+### Development Tools
+- **Jest**: Testing framework with coverage reporting
+- **ESLint**: Code linting and style enforcement
+- **Nodemon**: Development server with auto-reload
+- **GitHub Actions**: Continuous integration and deployment
 
-### Getting Started
-1. Install dependencies and run the server (`npm start` or `npm run dev`).
-2. Configure environment variables (MongoDB URI, JWT secret, etc.).
-3. Use the API routes to manage users and tasks.
+### Security & Monitoring
+- **Helmet**: Security headers middleware
+- **Morgan**: HTTP request logging
+- **Rate Limiting**: Brute force attack prevention
+- **Input Validation**: Data sanitization and validation
 
-### Suggested Next Steps for Contributors
-- Fix typos in `app.js` and the unfinished sections in the front-end files.
-- Implement missing helpers like `findByCredentials` in `models/user.js`.
-- Clean up merge conflict markers in `index.html`.
-- Expand tests to validate API functionality.
-- Review MongoDB Realm/Device Sync configuration if remote syncing is intended.
-- 
+## 📁 Project Structure
+
+```
+StudyPlanner/
+├── models/             # Database models
+│   ├── user.js        # User schema and methods
+│   └── task.js        # Task schema and validation
+├── routes/            # API endpoint definitions
+│   ├── userRoutes.js  # Authentication endpoints
+│   └── taskRoutes.js  # Task management endpoints
+├── test/              # Test suites
+│   └── taskModel.test.js
+├── .github/           # GitHub workflows and templates
+├── app.js            # Express server configuration
+├── db.js             # Database connection setup
+├── main.js           # Frontend JavaScript functionality
+├── index.html        # Main application interface
+├── style.css         # Application styling
+└── PROJECT_TIMELINE.md # Development roadmap
+```
+
+## 🔧 API Documentation
+
+### Authentication Endpoints
+- `POST /register` - User registration
+- `POST /login` - User authentication
+
+### Task Management Endpoints
+- `GET /api/tasks` - Retrieve user tasks
+- `POST /api/tasks` - Create new task
+- `GET /api/tasks/:id` - Get specific task
+- `PUT /api/tasks/:id` - Update task
+- `DELETE /api/tasks/:id` - Delete task
+
+## 🧪 Testing
+
+Run the test suite to ensure everything is working correctly:
+
+```bash
+# Run all tests with coverage
+npm test
+
+# Run tests in watch mode
+npm run test:watch
+
+# Run linting
+npm run lint
+```
+
+## 🚀 Development Workflow
+
+1. **Create a feature branch**
+```bash
+git checkout -b feature/your-feature-name
+```
+
+2. **Make your changes**
+- Follow existing code style and conventions
+- Add tests for new functionality
+- Update documentation as needed
+
+3. **Test your changes**
+```bash
+npm test
+npm run lint
+```
+
+4. **Submit a pull request**
+- Provide clear description of changes
+- Ensure all tests pass
+- Request review from maintainers
+
+## 📈 Current Development Status
+
+For detailed information about the development timeline, milestones, and upcoming features, see [PROJECT_TIMELINE.md](./PROJECT_TIMELINE.md).
+
+**Current Phase**: Frontend Enhancement (Week 9-10)
+- ✅ Core functionality complete
+- 🔄 UI/UX improvements in progress
+- 📋 AI features and advanced analytics planned
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our contribution guidelines:
+
+1. **Issues**: Report bugs or suggest features via GitHub Issues
+2. **Pull Requests**: Submit PRs for bug fixes or new features
+3. **Code Style**: Follow ESLint configuration and existing patterns
+4. **Testing**: Include tests for new functionality
+5. **Documentation**: Update relevant documentation
+
+## 📋 Known Issues & TODO
+
+### Current Issues
+- [ ] Fix ESLint warnings and errors
+- [ ] Clean up merge conflict markers in HTML
+- [ ] Improve error handling and user feedback
+- [ ] Add comprehensive input validation
+
+### Upcoming Features
+- [ ] AI-powered study recommendations
+- [ ] Calendar integration
+- [ ] Progress analytics dashboard
+- [ ] Mobile app development
+- [ ] Social features and study groups
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Support
+
+- **Documentation**: Check our [PROJECT_TIMELINE.md](./PROJECT_TIMELINE.md) for detailed development information
+- **Issues**: Report bugs or request features on [GitHub Issues](https://github.com/temichelle13/StudyPlanner/issues)
+- **Discussions**: Join conversations in [GitHub Discussions](https://github.com/temichelle13/StudyPlanner/discussions)
+
+---
+
+*Built with ❤️ for students everywhere*
