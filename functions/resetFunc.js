@@ -1,5 +1,5 @@
 
-  /*
+/*
     This function will be run when the client SDK 'callResetPasswordFunction' and is called with an object parameter
     which contains four keys: 'token', 'tokenId', 'username', and 'password', and additional parameters
     for each parameter passed in as part of the argument list from the SDK.
@@ -50,25 +50,25 @@
   */
 
 exports = async ({ token, tokenId, username, password }) => {
-  const serviceName = 'mongodb-atlas';
-  const dbName = 'myDatabase';
-  const users = context.services.get(serviceName).db(dbName).collection('users');
+	const serviceName = 'mongodb-atlas';
+	const dbName = 'myDatabase';
+	const users = context.services.get(serviceName).db(dbName).collection('users'); // eslint-disable-line no-undef
 
-  try {
-    const user = await users.findOne({ username, resetToken: token, resetTokenId: tokenId });
-    if (!user) {
-      return { status: 'fail' };
-    }
+	try {
+		const user = await users.findOne({ username, resetToken: token, resetTokenId: tokenId });
+		if (!user) {
+			return { status: 'fail' };
+		}
 
-    const bcrypt = require('bcryptjs');
-    const hashed = await bcrypt.hash(password, 8);
-    await users.updateOne(
-      { _id: user._id },
-      { $set: { password: hashed }, $unset: { resetToken: '', resetTokenId: '' } }
-    );
-    return { status: 'success' };
-  } catch (err) {
-    console.error('Error in resetFunc:', err);
-    return { status: 'fail' };
-  }
+		const bcrypt = require('bcryptjs');
+		const hashed = await bcrypt.hash(password, 8);
+		await users.updateOne(
+			{ _id: user._id },
+			{ $set: { password: hashed }, $unset: { resetToken: '', resetTokenId: '' } }
+		);
+		return { status: 'success' };
+	} catch (err) {
+		console.error('Error in resetFunc:', err);
+		return { status: 'fail' };
+	}
 };
