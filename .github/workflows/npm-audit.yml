@@ -1,4 +1,4 @@
-name: NPM Audit Workflowhttps://github.com/temichelle13/StudyPlanner/tree/master/.github/workflows
+name: NPM Audit Workflow
 
 on:
   push:
@@ -14,10 +14,20 @@ jobs:
 
     steps:
       - name: Checkout code for audit
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Run NPM Audit
-        run: npm audit --audit-level=high
+        run: |
+          npm audit --audit-level=high || {
+            echo "High-level vulnerabilities found. Please run 'npm audit fix' to fix them."
+            exit 1
+          }
