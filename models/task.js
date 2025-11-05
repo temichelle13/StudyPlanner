@@ -15,10 +15,16 @@ const taskSchema = new mongoose.Schema({
     },
     dueDate: {
         type: Date,
-        default: Date.now,
+        default: () => new Date(Date.now() + 24 * 60 * 60 * 1000),
         validate: {
             validator: function(value) {
-                return value > Date.now();
+                if (!value) {
+                    return false;
+                }
+                const comparisonBase = this.createdAt instanceof Date
+                    ? this.createdAt.getTime()
+                    : Date.now();
+                return value.getTime() >= comparisonBase;
             },
             message: 'Due date must be in the future.'
         }

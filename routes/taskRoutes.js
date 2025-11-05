@@ -44,4 +44,38 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+// POST create a new task
+router.post("/", async (req, res) => {
+  try {
+    const { title, description, dueDate, priority, completed } = req.body;
+    if (!title) {
+      return res.status(400).json({ message: "Title is required" });
+    }
+
+    let normalizedDueDate;
+    if (dueDate) {
+      normalizedDueDate = new Date(dueDate);
+      if (Number.isNaN(normalizedDueDate.getTime())) {
+        return res.status(400).json({ message: "Invalid due date" });
+      }
+    }
+
+    const task = new Task({
+      title,
+      description,
+      dueDate: normalizedDueDate,
+      priority,
+      completed,
+    });
+
+    await task.save();
+    res.status(201).json(task);
+  } catch (error) {
+    if (error instanceof mongoose.Error.ValidationError) {
+      return res.status(400).json({ message: error.message });
+    }
+    res.status(500).json({ message: error.message });
+  }
+});
+
 module.exports = router;
