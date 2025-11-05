@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Study Planner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+    <header class="app-header">
+        <div class="branding">
+            <span class="branding__logo" aria-hidden="true">🎓</span>
+            <div class="branding__copy">
+                <h1 class="branding__title">Study Planner</h1>
+                <p class="branding__tagline">Plan smarter. Study better.</p>
+            </div>
+        </div>
+        <nav class="app-nav" aria-label="Primary">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+                <span class="nav-toggle__icon" aria-hidden="true"></span>
+                <span class="nav-toggle__label">Menu</span>
+            </button>
+            <ul id="primary-navigation" class="nav-list">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#tasks">Tasks</a></li>
+                <li><a href="#goals">Goals</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#analytics">Analytics</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="app-main">
+        <aside class="sidebar" aria-label="Quick Access">
+            <section class="panel profile" aria-labelledby="profile-heading">
+                <h2 class="panel__title" id="profile-heading">Your Study Snapshot</h2>
+                <div class="profile__summary">
+                    <p class="profile__name">Taylor Larson</p>
+                    <p class="profile__program">Computer Science, BSc</p>
+                    <div class="profile__streak" role="status" aria-live="polite">
+                        <span class="profile__streak-count" data-profile-streak>12</span>
+                        <span class="profile__streak-label">day streak</span>
+                    </div>
+                </div>
+                <div class="profile__metrics">
+                    <div class="metric">
+                        <p class="metric__label">Focus Hours (This Week)</p>
+                        <p class="metric__value" data-metric-hours>18.5h</p>
+                    </div>
+                    <div class="metric">
+                        <p class="metric__label">Assignments Due</p>
+                        <p class="metric__value" data-metric-due>3</p>
+                    </div>
+                    <div class="metric">
+                        <p class="metric__label">Average Mood</p>
+                        <p class="metric__value" data-metric-mood>😊</p>
+                    </div>
+                </div>
+                <button class="button button--primary button--full" type="button" data-open-session>
+                    Log a study session
+                </button>
+            </section>
+            <section class="panel quick-links" aria-labelledby="quick-links-heading">
+                <h2 class="panel__title" id="quick-links-heading">Quick Links</h2>
+                <ul class="quick-links__list">
+                    <li><a href="#tasks" class="quick-links__item">Add new task</a></li>
+                    <li><a href="#schedule" class="quick-links__item">Plan next study block</a></li>
+                    <li><a href="#resources" class="quick-links__item">Recommended resources</a></li>
+                    <li><a href="#analytics" class="quick-links__item">Weekly reflection</a></li>
+                </ul>
+            </section>
+            <section class="panel focus-mode" aria-labelledby="focus-mode-heading">
+                <h2 class="panel__title" id="focus-mode-heading">Focus Mode</h2>
+                <p class="panel__subtitle">Pomodoro timer preset</p>
+                <div class="focus-mode__timer" data-focus-timer>25:00</div>
+                <div class="focus-mode__actions">
+                    <button class="button button--secondary" type="button" data-start-timer>Start</button>
+                    <button class="button button--ghost" type="button" data-reset-timer>Reset</button>
+                </div>
+            </section>
+        </aside>
+        <section class="content">
+            <section class="panel panel--highlight" id="overview" aria-labelledby="overview-heading">
+                <div class="panel__header">
+                    <h2 class="panel__title" id="overview-heading">Today at a Glance</h2>
+                    <p class="panel__subtitle">A curated overview of the essentials for your study day.</p>
+                </div>
+                <div class="overview__grid">
+                    <article class="card" aria-labelledby="card-focus-heading">
+                        <h3 class="card__title" id="card-focus-heading">Daily Focus</h3>
+                        <p class="card__subtitle" data-overview-focus>Finish the database systems lab and review lecture 7.</p>
+                        <ul class="card__list" data-overview-checklist>
+                            <li>Outline lab report</li>
+                            <li>Attend peer-study session at 3pm</li>
+                            <li>Summarize lecture highlights</li>
+                        </ul>
+                    </article>
+                    <article class="card" aria-labelledby="card-progress-heading">
+                        <h3 class="card__title" id="card-progress-heading">Progress Trackers</h3>
+                        <dl class="progress-list">
+                            <div class="progress-list__item">
+                                <dt>Weekly goal completion</dt>
+                                <dd>
+                                    <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="65">
+                                        <span class="progress__bar" style="width: 65%" data-progress-weekly></span>
+                                    </div>
+                                    <span class="progress__value">65%</span>
+                                </dd>
+                            </div>
+                            <div class="progress-list__item">
+                                <dt>Focus consistency</dt>
+                                <dd>
+                                    <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="82">
+                                        <span class="progress__bar" style="width: 82%" data-progress-focus></span>
+                                    </div>
+                                    <span class="progress__value">82%</span>
+                                </dd>
+                            </div>
+                            <div class="progress-list__item">
+                                <dt>Energy level</dt>
+                                <dd>
+                                    <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="48">
+                                        <span class="progress__bar" style="width: 48%" data-progress-energy></span>
+                                    </div>
+                                    <span class="progress__value">48%</span>
+                                </dd>
+                            </div>
+                        </dl>
+                    </article>
+                    <article class="card card--horizontal" aria-labelledby="card-upcoming-heading">
+                        <h3 class="card__title" id="card-upcoming-heading">Upcoming Sessions</h3>
+                        <ul class="timeline" data-schedule-timeline>
+                            <!-- Populated dynamically -->
+                        </ul>
+                    </article>
+                </div>
+            </section>
+            <section class="panel" id="schedule" aria-labelledby="schedule-heading">
+                <div class="panel__header">
+                    <h2 class="panel__title" id="schedule-heading">Study Schedule</h2>
+                    <div class="panel__actions">
+                        <button class="button button--ghost" type="button" data-plan-session>Plan Session</button>
+                        <button class="button button--ghost" type="button" data-sync-calendar>Sync Calendar</button>
+                    </div>
+                </div>
+                <div class="schedule__content">
+                    <div class="schedule__grid" data-schedule-grid>
+                        <!-- Calendar grid populated dynamically -->
+                    </div>
+                    <aside class="schedule__aside" aria-label="Session Details">
+                        <h3 class="schedule__title">Next Deep Work Block</h3>
+                        <p class="schedule__time" data-next-session-time>Today • 4:00 PM – 6:00 PM</p>
+                        <p class="schedule__summary" data-next-session-summary>
+                            Work through problem set 5 with spaced repetition review.
+                        </p>
+                        <ul class="schedule__checklist" data-next-session-checklist>
+                            <li>Warm up with flashcards (15 min)</li>
+                            <li>Practice algorithms set B</li>
+                            <li>Summarize insights in notebook</li>
+                        </ul>
+                    </aside>
+                </div>
+            </section>
+            <section class="panel" id="tasks" aria-labelledby="tasks-heading">
+                <div class="panel__header">
+                    <div>
+                        <h2 class="panel__title" id="tasks-heading">Task Management</h2>
+                        <p class="panel__subtitle">Keep track of assignments, revisions, and personal goals.</p>
+                    </div>
+                    <form class="task-filters" data-task-filters>
+                        <label class="task-filters__item">
+                            <span>Status</span>
+                            <select name="status">
+                                <option value="all">All</option>
+                                <option value="open">Open</option>
+                                <option value="completed">Completed</option>
+                            </select>
+                        </label>
+                        <label class="task-filters__item">
+                            <span>Priority</span>
+                            <select name="priority">
+                                <option value="all">All</option>
+                                <option value="High">High</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Low">Low</option>
+                            </select>
+                        </label>
+                        <label class="task-filters__item">
+                            <span>Sort</span>
+                            <select name="sort">
+                                <option value="dueDate">Due date</option>
+                                <option value="priority">Priority</option>
+                                <option value="title">Title</option>
+                            </select>
+                        </label>
+                    </form>
+                </div>
+                <div class="tasks__layout">
+                    <form class="task-form" data-task-form novalidate>
+                        <h3 class="task-form__title">Quick Add Task</h3>
+                        <label class="task-form__field">
+                            <span>Title</span>
+                            <input type="text" name="title" autocomplete="off" required maxlength="100" placeholder="e.g. Draft research outline" />
+                        </label>
+                        <label class="task-form__field">
+                            <span>Description</span>
+                            <textarea name="description" rows="3" maxlength="500" placeholder="Add context, resources, or goals"></textarea>
+                        </label>
+                        <label class="task-form__field">
+                            <span>Due date</span>
+                            <input type="date" name="dueDate" />
+                        </label>
+                        <label class="task-form__field">
+                            <span>Priority</span>
+                            <select name="priority">
+                                <option value="Medium">Medium</option>
+                                <option value="High">High</option>
+                                <option value="Low">Low</option>
+                            </select>
+                        </label>
+                        <div class="task-form__actions">
+                            <button class="button button--primary" type="submit">Save task</button>
+                            <button class="button button--ghost" type="reset">Clear</button>
+                        </div>
+                        <p class="form-feedback" data-task-feedback role="status" aria-live="polite"></p>
+                    </form>
+                    <div class="tasks__list-wrapper">
+                        <ul class="tasks__list" data-task-list aria-live="polite" aria-busy="false">
+                            <!-- Tasks rendered here -->
+                        </ul>
+                        <p class="tasks__empty" data-task-empty hidden>
+                            Add your first task to start building momentum.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="panel" id="goals" aria-labelledby="goals-heading">
+                <div class="panel__header">
+                    <h2 class="panel__title" id="goals-heading">Goal Planning</h2>
+                    <p class="panel__subtitle">Break down big objectives into actionable steps.</p>
+                </div>
+                <div class="goals__grid" data-goals-grid>
+                    <!-- Goals populated dynamically -->
+                </div>
+            </section>
+            <section class="panel" id="resources" aria-labelledby="resources-heading">
+                <div class="panel__header">
+                    <h2 class="panel__title" id="resources-heading">Resource Library</h2>
+                    <p class="panel__subtitle">Curated materials to support your study journey.</p>
+                </div>
+                <div class="resources__grid" data-resources-grid>
+                    <!-- Resources populated dynamically -->
+                </div>
+            </section>
+            <section class="panel" id="analytics" aria-labelledby="analytics-heading">
+                <div class="panel__header">
+                    <h2 class="panel__title" id="analytics-heading">Insights &amp; Reflection</h2>
+                    <p class="panel__subtitle">Understand trends in your study habits to continuously improve.</p>
+                </div>
+                <div class="analytics__grid">
+                    <article class="card" aria-labelledby="analytics-trends">
+                        <h3 class="card__title" id="analytics-trends">Weekly Trends</h3>
+                        <ul class="card__list" data-analytics-trends>
+                            <!-- Populated dynamically -->
+                        </ul>
+                    </article>
+                    <article class="card" aria-labelledby="analytics-reflection">
+                        <h3 class="card__title" id="analytics-reflection">Reflection Prompts</h3>
+                        <p class="card__subtitle">Use these prompts to capture qualitative insights after each session.</p>
+                        <ul class="card__list">
+                            <li>What strategy helped you learn most effectively today?</li>
+                            <li>Where did you feel resistance, and what might help next time?</li>
+                            <li>Which concept needs reinforcement before the next class?</li>
+                        </ul>
+                    </article>
+                    <article class="card" aria-labelledby="analytics-celebrations">
+                        <h3 class="card__title" id="analytics-celebrations">Highlights &amp; Celebrations</h3>
+                        <ul class="card__list" data-analytics-wins>
+                            <!-- Populated dynamically -->
+                        </ul>
+                    </article>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer class="app-footer">
+        <p>&copy; <span data-current-year></span> Study Planner. Built to empower focused, sustainable learning.</p>
+        <nav aria-label="Footer">
+            <ul class="footer-nav">
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <template id="task-item-template">
+        <li class="task" data-task>
+            <div class="task__header">
+                <div>
+                    <h3 class="task__title" data-task-title></h3>
+                    <p class="task__meta">
+                        <span class="task__due" data-task-due></span>
+                        <span class="task__priority" data-task-priority></span>
+                    </p>
+                </div>
+                <label class="task__toggle">
+                    <input type="checkbox" data-task-complete />
+                    <span>Done</span>
+                </label>
+            </div>
+            <p class="task__description" data-task-description></p>
+            <div class="task__footer">
+                <span class="task__tag" data-task-tag></span>
+                <div class="task__actions">
+                    <button class="button button--ghost" type="button" data-task-edit>Edit</button>
+                    <button class="button button--ghost" type="button" data-task-delete>Delete</button>
+                </div>
+            </div>
+        </li>
+    </template>
+
+    <script src="scripts/app.js" type="module"></script>
+</body>
+</html>

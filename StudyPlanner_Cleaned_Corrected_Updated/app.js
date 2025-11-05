@@ -1,37 +1,44 @@
-
 require('dotenv').config();
+const path = require('path');
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
 const helmet = require('helmet');
 
+const connectDB = require('./db');
+const taskRoutes = require('./routes/taskRoutes');
+const userRoutes = require('./routes/userRoutes');
+const { notFoundHandler, errorHandler } = require('./middleware/errorHandlers');
+
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Middleware for parsing JSON and urlencoded data
+connectDB();
+
+app.use(helmet());
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(morgan(process.env.NODE_ENV === 'production' ? 'combined' : 'dev'));
 
-// Enable CORS for all routes
-app.use(cors());
+const publicDirectory = path.join(__dirname, 'public');
+app.use(express.static(publicDirectory));
 
-// Helmet for security by setting various HTTP headers
-app.use(helmet());
+app.use('/api/tasks', taskRoutes);
+app.use('/api/auth', userRoutes);
 
-// Morgan for logging HTTP requests
-app.use(morgan('tiny'));
-
-// Global error handler for uncaught exceptions and unhandled promise rejections
-process.on('uncaughtException', (error) => {
-    console.error(`Uncaught Exception: ${error.message}`);
-    process.exit(1);
+app.get('*', (req, res, next) => {
+    if (req.method !== 'GET' || req.path.startsWith('/api')) {
+        return next();
+    }
+    return res.sendFile(path.join(publicDirectory, 'index.html'));
 });
 
-process.on('unhandledRejection', (error) => {
-    console.error(`Unhandled Rejection: ${error.message}`);
-});
+app.use(notFoundHandler);
+app.use(errorHandler);
 
-// Starting the server
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
+
+module.exports = app;
