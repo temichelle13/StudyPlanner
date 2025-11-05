@@ -15,12 +15,21 @@ const taskSchema = new mongoose.Schema({
     },
     dueDate: {
         type: Date,
-        default: Date.now,
+        default: null,
         validate: {
-            validator: function(value) {
-                return value > Date.now();
+            validator(value) {
+                if (!value) {
+                    return true;
+                }
+
+                const dueDate = new Date(value);
+                const today = new Date();
+                dueDate.setHours(0, 0, 0, 0);
+                today.setHours(0, 0, 0, 0);
+
+                return dueDate >= today;
             },
-            message: 'Due date must be in the future.'
+            message: 'Due date must be today or a future date.'
         }
     },
     completed: {
@@ -33,5 +42,14 @@ const taskSchema = new mongoose.Schema({
         default: 'Medium'
     }
 }, { timestamps: true });
+
+taskSchema.set('toJSON', {
+    transform: (_document, ret) => {
+        ret.id = ret._id.toString();
+        delete ret._id;
+        delete ret.__v;
+        return ret;
+    }
+});
 
 module.exports = mongoose.model('Task', taskSchema);

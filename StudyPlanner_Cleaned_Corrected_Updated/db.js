@@ -1,4 +1,3 @@
-
 const mongoose = require('mongoose');
 
 const connectDB = async () => {
@@ -18,7 +17,7 @@ mongoose.connection.on('connected', () => {
     console.log('Mongoose connected to db');
 });
 
-mongoose.connection.on('error', err => {
+mongoose.connection.on('error', (err) => {
     console.error(err.message);
 });
 
@@ -33,4 +32,4 @@ process.on('SIGINT', async () => {
 
 module.exports = connectDB;
 
-// Add robust error handling and reconnection strategies here
+// TODO: Add robust reconnection strategies if the application requires automatic recovery.

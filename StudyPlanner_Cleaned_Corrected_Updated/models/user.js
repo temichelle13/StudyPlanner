@@ -9,15 +9,18 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
         unique: true,
-        trim: true
+        trim: true,
+        minlength: 3,
+        maxlength: 30
     },
     email: {
         type: String,
         required: true,
         unique: true,
+        lowercase: true,
         trim: true,
         validate: {
-            validator: function(email) {
+            validator(email) {
                 return emailRegex.test(email);
             },
             message: 'Please enter a valid email address.'
@@ -27,17 +30,52 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     }
-});
+}, { timestamps: true });
+
+const SALT_ROUNDS = 12;
 
 // Password hashing middleware
 userSchema.pre('save', async function(next) {
     if (this.isModified('password')) {
-        this.password = await bcrypt.hash(this.password, 8);
+        if (this.password.length < 8) {
+            const error = new Error('Password must be at least 8 characters long.');
+            error.statusCode = 400;
+            return next(error);
+        }
+
+        this.password = await bcrypt.hash(this.password, SALT_ROUNDS);
     }
+
     next();
 });
 
-// NOTE: Implement rate limiting or account lockout strategies for enhanced security
-// Consider using middleware or a library for this purpose
+userSchema.methods.toJSON = function() {
+    const userObject = this.toObject();
+    userObject.id = userObject._id.toString();
+    delete userObject._id;
+    delete userObject.__v;
+    delete userObject.password;
+    return userObject;
+};
+
+userSchema.statics.findByCredentials = async function(email, password) {
+    const user = await this.findOne({ email: email.toLowerCase() });
+
+    if (!user) {
+        const error = new Error('Invalid email or password.');
+        error.statusCode = 401;
+        throw error;
+    }
+
+    const isMatch = await bcrypt.compare(password, user.password);
+
+    if (!isMatch) {
+        const error = new Error('Invalid email or password.');
+        error.statusCode = 401;
+        throw error;
+    }
+
+    return user;
+};
 
 module.exports = mongoose.model('User', userSchema);
