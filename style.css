@@ -1,65 +1,135 @@
-
-/* CSS reset for consistency across browsers */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Root font size for easy scaling with rem units */
 html {
-    font-size: 16px;
+  font-size: 16px;
 }
 
-/* Typography for body content */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    line-height: 1.6;
-    color: #333;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+  color: #333;
 }
 
-/* Header styling */
 header {
-    background-color: #007bff;
-    color: white;
-    padding: 1rem;
-    text-align: center;
+  background-color: #007bff;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
 }
 
-header h1 {
-    margin: 0;
-}
-
-/* Main content area and sections */
 main {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 section {
-    background-color: white;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    border-radius: 0.5rem;
+  background-color: #fff;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 
-/* Headings within sections */
 h2 {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
-/* Footer styling */
+form {
+  display: grid;
+  gap: 0.5rem;
+}
+
+label {
+  font-weight: 600;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid #c5c5c5;
+  border-radius: 0.375rem;
+  padding: 0.55rem 0.65rem;
+  background: #fff;
+  color: #1f2937;
+}
+
+/* Force readable dropdown text and options across browsers */
+select,
+select option {
+  color: #111827;
+  background-color: #ffffff;
+}
+
+button {
+  border: 0;
+  border-radius: 0.375rem;
+  background: #007bff;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.6rem 0.9rem;
+}
+
+button:hover {
+  background: #0065d1;
+}
+
+#taskList {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+#taskList > div {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  padding: 0.75rem;
+}
+
 footer {
-    background-color: #f8f8f8;
-    text-align: center;
-    padding: 1rem;
+  background-color: #f8f8f8;
+  text-align: center;
+  padding: 1rem;
 }
 
-/* Responsive design for larger screens */
+.subscribe-form {
+  margin: 0.75rem auto 0;
+  max-width: 600px;
+  text-align: left;
+}
+
+.subscribe-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem;
+}
+
+.form-status {
+  min-height: 1.25rem;
+  font-size: 0.92rem;
+}
+
+.form-status.success {
+  color: #166534;
+}
+
+.form-status.error {
+  color: #991b1b;
+}
+
 @media (min-width: 768px) {
-    section {
-        margin: 1rem auto;
-        max-width: 80%;
-    }
+  section {
+    margin: 1rem auto;
+    max-width: 80%;
+  }
 }
-
