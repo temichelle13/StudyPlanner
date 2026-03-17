@@ -111,7 +111,7 @@ function initDiscoveryContactForm() {
         body: JSON.stringify(payload),
       });
 
-      if (!response.ok && response.status !== 404) {
+      if (!response.ok) {
         throw new Error('Contact endpoint failed.');
       }
 
@@ -150,7 +150,7 @@ function initFooterSubscribeForm() {
         body: JSON.stringify({ email }),
       });
 
-      if (!response.ok && response.status !== 404) {
+      if (!response.ok) {
         throw new Error('Subscribe endpoint failed.');
       }
 
